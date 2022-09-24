@@ -1,0 +1,65 @@
+$primary-color: #202125;
+
+@import 'animate.css';
+
+@import '~loaders.css/src/animations/line-scale-pulse-out-rapid.scss';
+
+@font-face {
+    font-family: 'Bold';
+    src: url('./assets/fonts/GothamRoundedBold_21016.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url('./assets/fonts/GothamRoundedMedium_21022.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('./assets/fonts/GothamRoundedLight_21020.ttf') format("truetype");
+}
+
+input,
+textarea {
+    font-family: 'GothamRoundedLight';
+}
+
+.loader-hidden {
+    display: none;
+}
+
+.loader-active {
+    display: block;
+    position: absolute;
+    left: 5%;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    animation: fadeOut 1s 1s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 600px) {
+
+    .loader-hidden {
+    display: none;
+}
+
+.loader-active {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    animation: fadeOut 1s 1s;
+    animation-fill-mode: forwards;
+}
+
+}
