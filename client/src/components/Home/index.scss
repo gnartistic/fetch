@@ -6,7 +6,7 @@ $space: 1rem;
     box-sizing: border-box;
 }
 
-.home-page {
+.login-page {
     .logo-zone {
         display: flex;
         position: relative;
@@ -90,8 +90,6 @@ $space: 1rem;
             }
 
             .createAccount {
-                font-family: 'Medium';
-                color: #fefefe;
                 padding: 1rem;
                 width: 25rem;
                 margin-top: 3rem;
@@ -99,6 +97,12 @@ $space: 1rem;
                 border-radius: 25px;
                 text-transform: uppercase;
                 background: linear-gradient(90deg, #25f497 0%,#12c9c3 40%, #059bf3 100%);
+
+                a {
+                font-family: 'Medium';
+                color: #fefefe;
+                text-decoration: none;
+                }
             }
 
             input {
@@ -114,7 +118,7 @@ $space: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
-    .home-page {
+    .login-page {
         .logo-zone {
             h1 {
                 position: fixed;

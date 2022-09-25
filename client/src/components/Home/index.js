@@ -1,6 +1,8 @@
 import React from 'react'
 import './index.scss';
 import Ball from '../../assets/images/invertedBall.png';
+import { Link } from "react-router-dom";
+import Loader from 'react-loaders';
 
 const bg = {
     width: '100%',
@@ -11,7 +13,8 @@ const bg = {
 const Home = () =>
 {
     return (
-        <div className='container home-page' style={bg}>
+        <>
+        <div className='container login-page' style={bg}>
             <div className='logo-zone'>
                 <h1><img src={Ball} alt="white tennis ball" />Fetch</h1>
             </div>
@@ -23,15 +26,19 @@ const Home = () =>
 
                     <button className='signIn'>Sign in</button>
 
-                    <a href=''>Trouble signing in?</a>
+                    <Link>Trouble signing in?</Link>
 
-                    <button className='createAccount'>Create Account</button>
+                    <button className='createAccount'>
+                        <Link to='/Signup'>Create Account</Link>
+                    </button>
 
                     <p>By tapping "Create Account" or "Sign in", you agree to our Terms of Service.</p>
                 </form>
 
             </div>
-        </div>
+            </div>
+        <Loader type="ball-pulse-sync" />
+            </>
     )
 }
 

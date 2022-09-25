@@ -1,0 +1,79 @@
+$space: 1rem;
+
+.form-zone {
+        display: flex;
+        position: relative;
+        transform: translateY(-50%);
+        width: 100%;
+        max-height: 10%;
+        justify-content: center;
+    .signup-form {
+        width: 800px;
+        height: 600px;
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: ($space * 2) ($space * 2) 0;
+        box-shadow: 0 0 $space rgba(0, 0, 0, 0.03),
+            0 $space (
+            $space * 2) rgba(0, 0, 0, 0.05),
+            0 ($space * 2) ($space * 4) rgba(0, 0, 0, 0.05),
+            0 ($space * 4) ($space * 8) rgba(0, 0, 0, 0.05
+        );
+        overflow-y: scroll;
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        label {
+                font-family: 'Light';
+                font-weight: 600;
+                margin: 1rem 0 1rem 0;
+                text-align: center;
+                color: #202125;
+                padding: 0 2rem 0 2rem;
+        }
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 1.5s 1.5s;
+            animation-fill-mode: forwards;
+            clear: both;
+
+            input, textarea {
+                padding: .8rem;
+                border-radius: 3px;
+                width: 25rem;
+                margin: .8rem;
+                font-family: 'Medium';
+                opacity: 0.5;
+            }
+        }
+
+        button {
+                padding: 1rem;
+                width: 25rem;
+                margin-top: 3rem;
+                border: none;
+                border-radius: 25px;
+                text-transform: uppercase;
+                background: linear-gradient(90deg, #25f497 0%,#12c9c3 40%, #059bf3 100%);
+                font-family: 'Medium';
+                color: #fefefe;
+                text-decoration: none;
+        }
+    }
+}
+}

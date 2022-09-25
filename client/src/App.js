@@ -11,6 +11,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // import { setContext } from '@apollo/client/link/context';
 import Layout from './components/Layout';
 import Home from './components/Home';
+import Signup from './components/Signup';
 // import { StoreProvider } from './utils/GlobalState';
 
 // const httpLink = createHttpLink({
@@ -32,21 +33,18 @@ import Home from './components/Home';
 //   cache: new InMemoryCache(),
 // });
 
-
-
-function App() {
+function App ()
+{ 
   return (
     // <ApolloProvider client={client}>
       <Router>
         <div>
           {/* <StoreProvider> */}
-            <Routes>
-              <Route 
-                path="/" 
-                element={<Layout />} 
-          />
+        <Routes>
+          <Route path="/" element={<Layout />} />
           <Route index element={<Home />} />
-            </Routes>
+          <Route path='Signup' element={<Signup />} />
+        </Routes>
           {/* </StoreProvider> */}
         </div>
       </Router>
