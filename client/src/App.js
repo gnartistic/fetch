@@ -1,4 +1,5 @@
 import './App.scss';
+import './index.css'; 
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 import Layout from './components/Layout';
-import Home from './components/Home';
+import Login from './components/Login';
 import Signup from './components/Signup/Signup.js';
 // import { StoreProvider } from './utils/GlobalState';
 
@@ -38,11 +39,12 @@ function App ()
   return (
     // <ApolloProvider client={client}>
       <Router>
-        <div>
+      <div>
           {/* <StoreProvider> */}
         <Routes>
           <Route path="/" element={<Layout />} />
-          <Route index element={<Home />} />
+          <Route index element={<Login />} />
+          <Route path='Login' element={<Login />} />
           <Route path='Signup' element={<Signup />} />
         </Routes>
           {/* </StoreProvider> */}

@@ -21,9 +21,7 @@ $space: 1rem;
     .signup-form {
         width: 800px;
         height: 680px;
-        display: flex;
         padding: 4rem;
-        align-items: right;
         justify-content: center;
         background-color: #fefefe;
         border-radius: 10px;
@@ -36,43 +34,61 @@ $space: 1rem;
         );
 
     ul {
-        width: 40rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 60rem;
         padding: 2rem;
-        margin: 0;
 
         label {
-            font-family: 'Light';
-            font-weight: 600;
-            margin: 1rem 0 1rem 0;
+            font-family: 'Medium';
+            color: #444444;
             text-align: center;
-            color: #202125;
-            padding: 0 2rem 0 2rem;
             text-transform: uppercase;
+            padding-right: 2rem;
         }
 
         .age {
-                padding-right: 4.5rem;
-            }
+            padding-right: 4.5rem;
+        }
 
         li {
-            padding: .5rem;
+            padding: 1rem;
             list-style: none;
-            margin-bottom: 10px;
+            margin-bottom: 2rem;
             overflow: hidden;
-            display: block;
-            position: relative;
             opacity: 0;
-            animation: fadeInUp 1.5s 1.5s;
+            animation: fadeInUp .6s .6s;
             animation-fill-mode: forwards;
             clear: both;
         }
+    }
 
-        button {
-            position: absolute;
-            right: 5rem;
+    .nextButton {
+        button{
+        position: absolute;
+        left: 82%;
+        bottom: 5%;
             padding: 1rem;
             width: 10rem;
-            margin-top: 3rem;
+            border-color: #fefefe;
+            border-radius: 25px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #25f497 0%, #12c9c3 40%, #059bf3 100%);
+            font-family: 'Medium';
+            color: #fefefe;
+            text-decoration: none;
+        }
+    }
+
+    .prevButton {
+            button {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            padding: 1rem;
+            width: 10rem;
+            margin-top: 1rem;
             border: none;
             border-radius: 25px;
             text-transform: uppercase;
@@ -80,6 +96,105 @@ $space: 1rem;
             font-family: 'Medium';
             color: #fefefe;
             text-decoration: none;
+
+             a {
+                font-family: 'Medium';
+                color: #fefefe;
+                text-decoration: none;
+                }
+            }
+        }
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+    .form-zone {
+        transform: translateY(-50%);
+        position: absolute;
+        width: 100%;
+        top: 49%;
+        justify-content: center;
+
+        h1 {
+        font-family: 'Bold';
+        font-weight: 600;
+        text-align: center;
+        color: #444444;
+        padding: 0 0rem 0 0rem;
+        text-transform: uppercase;
+    }
+        .signup-form {
+            width: 800px;
+            height: 700px;
+            padding: 4rem;
+            justify-content: center;
+            background-color: #fefefe;
+            border-radius: 10px;
+            margin: ($space * 2) ($space * 2) 0;
+            box-shadow: 0 0 $space rgba(0, 0, 0, 0.03),
+                0 $space (
+                $space * 2) rgba(0, 0, 0, 0.05),
+                0 ($space * 2) ($space * 4) rgba(0, 0, 0, 0.05),
+                0 ($space * 4) ($space * 8) rgba(0, 0, 0, 0.05
+            );
+
+        ul {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 25rem;
+            padding: .5rem;
+            height: 55rem;
+
+            .age {
+            padding-right: 4.5rem;
+        }
+
+            li {
+                padding-bottom: 1rem;
+                list-style: none;
+                margin-bottom: 0rem;
+                opacity: 0;
+                animation: fadeInUp 1.5s 1.5s;
+                animation-fill-mode: forwards;
+                clear: both;
+            }
+        }
+
+        .nextButton {
+            button {
+            position: absolute;
+            left: 78%;
+            bottom: 2%;
+            width: 5rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #25f497 0%, #12c9c3 40%, #059bf3 100%);
+            font-family: 'Medium';
+            color: #fefefe;
+            text-decoration: none;
+            }
+        }
+
+        .prevButton {
+            button {
+            position: absolute;
+            left: 5%;
+            bottom: 2%;
+            width: 5rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #25f497 0%, #12c9c3 40%, #059bf3 100%);
+            font-family: 'Medium';
+            color: #fefefe;
+            text-decoration: none;
+            }
         }
     }
 }

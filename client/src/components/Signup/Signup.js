@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import UserDetails from './UserDetails'
-import PersonalDetails from './PersonalDetails'
-import Confirmation from './Confirmation'
-import Success from './Success'
+import PetDetails from './PetDetails'
+import Home from '../Home'
 
 export default class Signup extends Component
 {
@@ -16,11 +15,12 @@ export default class Signup extends Component
         gender: '',
         showMe: '',
         city: '',
+        state: '',
         occupation: '',
-        interests: '',
         petName: '',
         petAge: '',
         petGender: '',
+        petBreed: '',
         favActivity: '',
         personalityTraits: ''
     }
@@ -50,9 +50,9 @@ export default class Signup extends Component
     {
         const { step } = this.state;
 
-        const { email, username, password, firstName, age, gender, showMe, city, occupation, interests, petName, petAge, petGender, favActivity, personalityTraits } = this.state;
+        const { email, username, password, firstName, age, gender, showMe, city, state, occupation, petName, petAge, petGender, petBreed, favActivity, personalityTraits } = this.state;
 
-        const values = { email, username, password, firstName, age, gender, showMe, city, occupation, interests, petName, petAge, petGender, favActivity, personalityTraits }
+        const values = { email, username, password, firstName, age, gender, showMe, city, state, occupation, petName, petAge, petGender, petBreed, favActivity, personalityTraits }
 
         switch( step ) {
             case 1:
@@ -65,7 +65,7 @@ export default class Signup extends Component
                 )
             case 2:
                 return (
-                    <PersonalDetails
+                    <PetDetails
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
@@ -74,33 +74,7 @@ export default class Signup extends Component
                 )
             case 3:
                 return (
-                    <PersonalDetails
-                        prevStep={this.prevStep}
-                        nextStep={this.nextStep}
-                        handleChange={this.handleChange}
-                        values={values}
-                    />
-                )
-            case 4:
-                return (
-                    <PersonalDetails
-                        prevStep={this.prevStep}
-                        nextStep={this.nextStep}
-                        handleChange={this.handleChange}
-                        values={values}
-                    />
-                )
-            case 5:
-                return (
-                    <Confirmation
-                        prevStep={this.prevStep}
-                        nextStep={this.nextStep}
-                        values={values}
-                    />
-                )
-            case 6:
-                return (
-                    <Success />
+                    <Home />
                 )
             default:
             // do nothing

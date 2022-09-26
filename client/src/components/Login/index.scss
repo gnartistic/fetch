@@ -7,6 +7,9 @@ $space: 1rem;
 }
 
 .login-page {
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
     .logo-zone {
         display: flex;
         position: relative;
@@ -23,6 +26,8 @@ $space: 1rem;
             font-size: 15rem;
             font-family: 'Bold';
             font-weight: 400;
+            animation: bounce 1s forwards;
+            animation-delay: 2s;
         }
 
         img {
@@ -73,7 +78,7 @@ $space: 1rem;
                 font-weight: 600;
                 margin: 1rem 0 1rem 0;
                 text-align: center;
-                color: #202125;
+                color: #444444;
                 padding: 0 2rem 0 2rem;
             }
 
@@ -107,11 +112,15 @@ $space: 1rem;
 
             input {
                 padding: .8rem;
+                border-color: #44444437;
                 border-radius: 3px;
                 width: 25rem;
                 margin: .8rem;
-                font-family: 'Medium';
-                opacity: 0.5;
+                font-family: 'Light';
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #444444;
+                opacity: 0.8;
             }
     }
 }
