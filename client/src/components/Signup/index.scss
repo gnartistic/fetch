@@ -1,19 +1,29 @@
 $space: 1rem;
 
 .form-zone {
-        display: flex;
-        position: relative;
-        transform: translateY(-50%);
-        width: 100%;
-        max-height: 10%;
-        justify-content: center;
+    display: flex;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100%;
+    top: 49%;
+    justify-content: center;
+
+    h1 {
+        font-family: 'Bold';
+        font-weight: 600;
+        padding: 6rem;
+        text-align: center;
+        color: #444444;
+        padding: 0 2rem 0 2rem;
+        text-transform: uppercase;
+    }
+
     .signup-form {
         width: 800px;
-        height: 600px;
+        height: 680px;
         display: flex;
-        padding: 2rem;
-        flex-direction: column;
-        align-items: center;
+        padding: 4rem;
+        align-items: right;
         justify-content: center;
         background-color: #fefefe;
         border-radius: 10px;
@@ -24,24 +34,28 @@ $space: 1rem;
             0 ($space * 2) ($space * 4) rgba(0, 0, 0, 0.05),
             0 ($space * 4) ($space * 8) rgba(0, 0, 0, 0.05
         );
-        overflow-y: scroll;
 
     ul {
-        padding: 0;
+        width: 40rem;
+        padding: 2rem;
         margin: 0;
 
         label {
-                font-family: 'Light';
-                font-weight: 600;
-                margin: 1rem 0 1rem 0;
-                text-align: center;
-                color: #202125;
-                padding: 0 2rem 0 2rem;
+            font-family: 'Light';
+            font-weight: 600;
+            margin: 1rem 0 1rem 0;
+            text-align: center;
+            color: #202125;
+            padding: 0 2rem 0 2rem;
+            text-transform: uppercase;
         }
 
+        .age {
+                padding-right: 4.5rem;
+            }
+
         li {
-            padding: 0;
-            margin: 0;
+            padding: .5rem;
             list-style: none;
             margin-bottom: 10px;
             overflow: hidden;
@@ -51,28 +65,21 @@ $space: 1rem;
             animation: fadeInUp 1.5s 1.5s;
             animation-fill-mode: forwards;
             clear: both;
-
-            input, textarea {
-                padding: .8rem;
-                border-radius: 3px;
-                width: 25rem;
-                margin: .8rem;
-                font-family: 'Medium';
-                opacity: 0.5;
-            }
         }
 
         button {
-                padding: 1rem;
-                width: 25rem;
-                margin-top: 3rem;
-                border: none;
-                border-radius: 25px;
-                text-transform: uppercase;
-                background: linear-gradient(90deg, #25f497 0%,#12c9c3 40%, #059bf3 100%);
-                font-family: 'Medium';
-                color: #fefefe;
-                text-decoration: none;
+            position: absolute;
+            right: 5rem;
+            padding: 1rem;
+            width: 10rem;
+            margin-top: 3rem;
+            border: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #25f497 0%, #12c9c3 40%, #059bf3 100%);
+            font-family: 'Medium';
+            color: #fefefe;
+            text-decoration: none;
         }
     }
 }

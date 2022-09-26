@@ -11,7 +11,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // import { setContext } from '@apollo/client/link/context';
 import Layout from './components/Layout';
 import Home from './components/Home';
-import Signup from './components/Signup';
+import Signup from './components/Signup/Signup.js';
 // import { StoreProvider } from './utils/GlobalState';
 
 // const httpLink = createHttpLink({
