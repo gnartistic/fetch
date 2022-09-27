@@ -13,7 +13,8 @@ const express = require('express');
 // // Use this to log mongo queries being executed!
 // mongoose.set('debug', true);
 
-const { typeDefs, resolvers } = require('./schema');
+const typeDefs = require('./schema/typeDefs');
+const resolvers = require('./schema/resolvers'); 
 //const db = require('./config.connection');
 
 const app = express();

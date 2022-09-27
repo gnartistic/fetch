@@ -3,9 +3,9 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
 
 type User {
-    _id: ID
-    name: String
-    email: String
+    _id: ID!
+    username: String!
+    email: String!
     pets: [Pet]
 }
 
@@ -17,11 +17,17 @@ type Pet {
 }
 
 type Query {
-    user: [User]
+    user(id: ID!):User
+    users: [User!]
     pets: [Pet]
 }
 
 // TODO: Mutations Needed Below 
+
+type Mutation {
+    singup(username: String!, email: String!, password: String!): Boolean!
+    login(email: String!, password: String!): String! 
+}
 
 `;
 
