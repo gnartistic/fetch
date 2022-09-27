@@ -2,6 +2,8 @@ import React from 'react'
 import './index.scss'
 import Ball from '../../assets/images/invertedBall.png'
 
+// 
+
 const bg = {
     height:'8rem',
     width: '100%',
