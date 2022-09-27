@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import UserDetails from './UserDetails'
 import PetDetails from './PetDetails'
-import Home from '../Home'
 
 export default class Signup extends Component
 {
@@ -71,10 +70,6 @@ export default class Signup extends Component
                         handleChange={this.handleChange}
                         values={values}
                     />
-                )
-            case 3:
-                return (
-                    <Home />
                 )
             default:
             // do nothing

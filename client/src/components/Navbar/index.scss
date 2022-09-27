@@ -1,0 +1,24 @@
+.nav {
+    position: absolute;
+    top: 0%;
+h1 {
+            position: fixed;
+            top: -3%;
+            padding-left: 3rem;
+            color: #fefefe;
+            font-size: 5rem;
+            font-family: 'Bold';
+            font-weight: 400;
+            animation: fadeIn 1s forwards;
+
+        img {
+            opacity: 0;
+            width: auto;
+            height: 4rem;
+            animation: rollIn 1s linear both;
+            animation-delay: 1.3s;
+            margin-bottom: -2px;
+            padding-right: 2px;
+        }
+    }
+}

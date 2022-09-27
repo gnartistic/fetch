@@ -13,6 +13,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Login from './components/Login';
 import Signup from './components/Signup/Signup.js';
+import Home from './components/Home';
 // import { StoreProvider } from './utils/GlobalState';
 
 // const httpLink = createHttpLink({
@@ -46,6 +47,7 @@ function App ()
           <Route index element={<Login />} />
           <Route path='Login' element={<Login />} />
           <Route path='Signup' element={<Signup />} />
+          <Route path='Home' element={<Home />} />
         </Routes>
           {/* </StoreProvider> */}
         </div>

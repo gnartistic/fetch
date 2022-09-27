@@ -78,6 +78,12 @@ $space: 1rem;
             font-family: 'Medium';
             color: #fefefe;
             text-decoration: none;
+
+            a {
+                font-family: 'Medium';
+                color: #fefefe;
+                text-decoration: none;
+                }
         }
     }
 
@@ -97,7 +103,7 @@ $space: 1rem;
             color: #fefefe;
             text-decoration: none;
 
-             a {
+            a {
                 font-family: 'Medium';
                 color: #fefefe;
                 text-decoration: none;
@@ -106,6 +112,7 @@ $space: 1rem;
         }
 }
 }
+
 
 @media only screen and (max-width: 600px) {
 

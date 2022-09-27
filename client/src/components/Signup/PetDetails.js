@@ -1,5 +1,5 @@
 import './index.scss';
-import './index.scss';
+import { Link } from "react-router-dom";
 import { Select, TextField, Button, MenuItem, FormControl } from '@material-ui/core';
 
 const bg = {
@@ -35,12 +35,6 @@ const personalityTraits = ['Confident', 'Outgoing', 'Adaptable', 'Shy', 'Indepen
 
 const PetDetails = ( { prevStep, nextStep, handleChange, values } ) =>
 {
-
-  const Continue = e =>
-  {
-    e.preventDefault();
-    nextStep();
-  }
 
   const Previous = e =>
   {
@@ -167,13 +161,12 @@ const PetDetails = ( { prevStep, nextStep, handleChange, values } ) =>
                 </Button>
               </div>
               <div className='nextButton'>
-                <Button onClick={Continue}
+                <Button
                   type="submit"
                   fullWidth
                   variant="contained"
-                  color="primary"
-                >
-                  Done
+                  color="primary">
+                <Link to='/Home'>Done</Link>
                 </Button>
                 </div>
             </div>
