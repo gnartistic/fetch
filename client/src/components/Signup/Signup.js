@@ -12,7 +12,7 @@ const bg = {
     background: 'linear-gradient(90deg, #25f497 0%,#12c9c3 50%, #059bf3 100%)'
 }
 
-// class component 
+// functional component 
 const Signup = () =>
 {
     // page's state
@@ -44,11 +44,7 @@ const Signup = () =>
     //page rendering conditional statement
     const pageDisplay = () =>
     {
-        if( page === 0 ) {
-            return <UserDetails formData={formData} setFormData={setFormData} />;
-        } else {
-            return <PetDetails formData={formData} setFormData={setFormData} />;
-        }
+        return page === 0 ? <UserDetails formData={formData} setFormData={setFormData} /> : <PetDetails formData={formData} setFormData={setFormData} />;
     };
 
     // rendered page
@@ -57,12 +53,16 @@ const Signup = () =>
             <div className='signup-page container' style={bg}>
                 <div className='form-zone'>
                     <FormControl className='signup-form'>
+                        {/* I'm using the page's current state as the title's index in array */}
                         <h1>{formTitles[ page ]}</h1>
+                        {/* page's conditional statement */}
                         <div>{pageDisplay()}</div>
                         <div className='prevButton'>
                             <Button
+                                disabled={page == 0}
                                 onClick={() =>
                                 {
+                                    // go back one page
                                     setPage( ( currPage ) => currPage - 1 );
                                 }}
                             >
@@ -72,7 +72,9 @@ const Signup = () =>
                         <div className='nextButton'>
                             <Button
                                 onClick={() =>
-                                {
+                                { 
+                                    // using the page's state as comparison with the title's index in array again
+                                    // index starts at 0, so if the page = 2, then the index needs to be 1 to match, that's why formTitles.length -1
                                     if( page === formTitles.length - 1 ) {
                                         console.log( formData );
                                     } else {
