@@ -1,4 +1,4 @@
-const { User, Pets } = require('../../models');
+const { User, Pets } = require('../models');
 
 const resolvers = {
     Query: {
@@ -10,7 +10,7 @@ const resolvers = {
         }
     },
     Mutations: {
-        signup: async (parent, { username, email, password}) => {
+        signup: async (parent,{signupInput: { username, email, password}}) => {
             const user = await User.create({
                 username,
                 email,
