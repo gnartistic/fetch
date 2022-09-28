@@ -1,9 +1,8 @@
 import './App.scss';
-import './index.css'; 
+import './index.css';
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
 // import {
 //   ApolloClient,
 //   InMemoryCache,
@@ -11,10 +10,10 @@ function App() {
 //   createHttpLink,
 // } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
-import Layout from './components/Layout';
 import Login from './components/Login';
 import Signup from './components/Signup/';
 import Home from './components/Home';
+import DirectMessaging from './components/Home/Chat';
 // import { StoreProvider } from './utils/GlobalState';
 
 // const httpLink = createHttpLink({
@@ -37,23 +36,25 @@ import Home from './components/Home';
 // });
 
 function App ()
-{ 
+{
   return (
     // <ApolloProvider client={client}>
-    <Router>
-      <div>
-        {/* <StoreProvider> */}
-        <Routes>
-          <Route path="/" element={<Layout />} />
-          <Route index element={<Login />} />
-          <Route path='Login' element={<Login />} />
-          <Route path='Signup' element={<Signup />} />
-          <Route path='Home' element={<Home />} />
-        </Routes>
-        {/* </StoreProvider> */}
-      </div>
-    </Router>
-    // </ApolloProvider>
+    <>
+      <Router>
+        <div>
+          {/* <StoreProvider> */}
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path='Login' element={<Login />} />
+            <Route path='Signup' element={<Signup />} />
+            <Route path='Home' element={<Home />} />
+            <Route path='Chat' element={<DirectMessaging />} />
+          </Routes>
+          {/* </StoreProvider> */}
+        </div>
+      </Router>
+      {/* </ApolloProvider> */}
+    </>
   );
 }
 
