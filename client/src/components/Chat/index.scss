@@ -1,0 +1,122 @@
+.ce-message-bubble {
+    background-color: #637dec !important;
+}
+
+.ce_message {
+    font-family: 'Medium' !important;
+    color: aliceblue;
+}
+
+.ce-chat-title-text,
+.ce-chat-subtitle-text,
+.ce-message-date-text,
+.ce-section-title-container {
+    color: #7068ce;
+    font-family: 'Medium' !important;
+}
+
+.ce-primary-button {
+    border-color: aliceblue !important;
+    color: aliceblue !important;
+    background-color: #7068ce !important;
+
+    svg {
+        fill: aliceblue !important;
+    }
+}
+
+.ce-chat-form-container {
+    background-color: aliceblue !important;
+
+    form {
+        input {
+            font-family: 'Medium';
+            color: #637dec !important;
+            border-color: #637dec !important;
+            background-color: aliceblue !important;
+        }
+    }
+
+    div {
+        div {
+            div {
+                font-family: 'Medium';
+                color: #637dec !important;
+            }
+        }
+    }
+}
+
+.anticon,
+.anticon-close {
+    svg {
+        fill: rgb(209, 208, 208) !important;
+    }
+}
+
+.ce-avatar-dot,
+.ce-avatar {
+    background-color: rgb(209, 208, 208) !important;
+}
+
+.ce-chat-unread-dot {
+    background-color: #7e55af !important;
+}
+
+.ce-chat-card {
+    margin-top: 1vh;
+}
+
+#ce-send-message-button {
+    background-color: #637dec !important;
+}
+
+svg {
+    fill: #637dec !important;
+}
+
+.ce-chat-settings-mobile-option {
+    div {
+        background-color: aliceblue !important;
+        font-family: 'Medium';
+        color: #637dec !important;
+    }
+}
+
+.ql-editor {
+    color: rgb(117, 117, 117);
+}
+
+.ce-chats-container,
+.ce-chat-feed-container,
+.ce-chat-title,
+.ql-editor,
+.ql-toolbar,
+.ql-snow,
+.ce-settings,
+.ce-input,
+.ce-section-title-container {
+    background-color: aliceblue !important;
+}
+
+#ce-options-drop-down {
+    div {
+        color: #7068ce;
+        font-family: 'Medium' !important;
+        background-color: aliceblue !important;
+    }
+}
+
+#ce-ice-breaker-text {
+    font-family: 'Medium' !important;
+}
+
+img#ce-ice-breaker-gif {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.ce-text-input {
+    font-family: 'Medium' !important;
+    color: rgb(117, 117, 117);
+}

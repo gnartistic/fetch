@@ -13,7 +13,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Signup from './components/Signup/';
 import Home from './components/Home';
-import DirectMessaging from './components/Home/Chat';
+import DirectMessaging from './components/Chat/';
 // import { StoreProvider } from './utils/GlobalState';
 
 // const httpLink = createHttpLink({

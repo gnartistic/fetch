@@ -1,5 +1,6 @@
 import { ChatEngine, getOrCreateChat } from 'react-chat-engine'
 import React, { useState } from 'react'
+import './index.scss'
 
 const Chat = () =>
 {
@@ -13,17 +14,17 @@ const Chat = () =>
         getOrCreateChat(
             credentials,
             //function will only work if the app is a direct messaging one, hence setting 'is_direct_chat' to true and consequentially setting a list of usernames to search from. one
-            { is_direct_chat: true, username: [ username ] }, () => setUsername( '' )
+            { is_direct_chat: true, usernames: [ username ] }, () => setUsername( '' )
         )
     }
 
-    const displayChatInterface = ( credentials ) =>
+    const renderChatForm = ( credentials ) =>
     {
         return (
             <>
                 <input
                     type="text"
-                    placeholder='Find username'
+                    placeholder='Username'
                     value={username} //prop from the useState hook
                     // A controlled function that sets the username to what the user types in the input field
                     onChange={( e ) => setUsername( e.target.value )}
@@ -31,7 +32,7 @@ const Chat = () =>
 
                 {/* clicking button will call the implementingDirectChat function that displays a list of usernames to create or find an existing chat.  */}
                 <button onClick={() => implementingDirectChat( credentials )}>
-                    Create Chat
+                    Chat
                 </button>
             </>
         )
@@ -44,7 +45,7 @@ const Chat = () =>
             // accessing the stored env in the .env file
             userSecret='Secret'
             projectID='3a31985e-6035-459e-9061-8104c8a33da3'
-            displayNewChatInterface={( credentials ) => displayChatInterface( credentials )} />
+            displayNewChatInterface={( credentials ) => renderChatForm( credentials )} />
     )
 }
 
