@@ -1,9 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import './index.css'; 
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
-<<<<<<< HEAD
 function App() {
-=======
 // import {
 //   ApolloClient,
 //   InMemoryCache,
@@ -38,25 +38,23 @@ import Home from './components/Home';
 
 function App ()
 { 
->>>>>>> b047970 (most up to date signup page)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <ApolloProvider client={client}>
+    <Router>
+      <div>
+        {/* <StoreProvider> */}
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route index element={<Login />} />
+          <Route path='Login' element={<Login />} />
+          <Route path='Signup' element={<Signup />} />
+          <Route path='Home' element={<Home />} />
+        </Routes>
+        {/* </StoreProvider> */}
+      </div>
+    </Router>
+    // </ApolloProvider>
   );
 }
 
-export default App;
+export default App
