@@ -1,0 +1,87 @@
+$primary-color: aliceblue 
+;
+
+@import 'animate.css';
+
+@import '~loaders.css/src/animations/ball-pulse-sync.scss';
+
+@font-face {
+    font-family: 'Bold';
+    src: url('./assets/fonts/GothamRoundedBold_21016.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url('./assets/fonts/GothamRoundedMedium_21022.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('./assets/fonts/GothamRoundedLight_21020.ttf') format("truetype");
+}
+
+input,
+textarea {
+    font-family: 'GothamRoundedLight';
+}
+
+.loader-hidden {
+    display: none;
+}
+
+.loader-active {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 7rem;
+    height: 3rem;
+    animation: fadeOut 1s 1s;
+    animation-fill-mode: forwards;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container {
+    width: 100%;
+    will-change: contents;
+    min-height: 566px;
+    position: absolute;
+    opacity: 0;
+    padding-top: 5%;
+    padding: 0 auto;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 0s forwards;
+    overflow-y: hidden;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .loader-hidden {
+    display: none;
+}
+
+.loader-active {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 7rem;
+    height: 3rem;
+    animation: fadeOut 1s 1s;
+    animation-fill-mode: forwards;
+}
+
+}

@@ -1,0 +1,200 @@
+$space: 1rem;
+$gradient: linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%);
+
+.form-zone {
+    display: flex;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100%;
+    top: 49%;
+    justify-content: center;
+
+    h1 {
+        font-family: 'Bold';
+        font-weight: 600;
+        padding: 6rem;
+        text-align: center;
+        color: #444444;
+        padding: 0 2rem 0 2rem;
+        text-transform: uppercase;
+    }
+
+    .signup-form {
+        width: 800px;
+        height: 680px;
+        padding: 4rem;
+        background-color: aliceblue;
+        border-radius: 10px;
+        margin: ($space * 2) ($space * 2) 0;
+        box-shadow: 0 0 $space rgba(0, 0, 0, 0.03),
+            0 $space (
+            $space * 2) rgba(0, 0, 0, 0.05),
+            0 ($space * 2) ($space * 4) rgba(0, 0, 0, 0.05),
+            0 ($space * 4) ($space * 8) rgba(0, 0, 0, 0.05
+        );
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 60vh;
+        padding: 2rem;
+
+        label {
+            font-family: 'Medium';
+            color: #444444;
+            text-align: center;
+            text-transform: uppercase;
+            padding-right: 2rem;
+        }
+
+        .age {
+            padding-right: 4.5rem;
+        }
+
+        li {
+            padding: 1rem;
+            list-style: none;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInUp .6s .6s;
+            animation-fill-mode: forwards;
+            clear: both;
+        }
+    }
+
+    .nextButton {
+        button{
+        position: absolute;
+        left: 82%;
+        bottom: 5%;
+            padding: 1rem;
+            width: 10rem;
+            border-color: aliceblue;
+            border-radius: 25px;
+            text-transform: uppercase;
+            background: $gradient;
+            font-family: 'Medium';
+            color: aliceblue;
+            text-decoration: none;
+        }
+    }
+
+    .prevButton {
+            button {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            padding: 1rem;
+            width: 10rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            background: $gradient;
+            font-family: 'Medium';
+            color: aliceblue;
+            text-decoration: none;
+
+            a {
+                font-family: 'Medium';
+                color: aliceblue;
+                text-decoration: none;
+                }
+            }
+        }
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+    .form-zone {
+        transform: translateY(-50%);
+        position: absolute;
+        width: 100%;
+        top: 49%;
+        justify-content: center;
+
+        h1 {
+        font-family: 'Bold';
+        font-weight: 600;
+        text-align: center;
+        color: #444444;
+        padding: 0 0rem 0 0rem;
+        text-transform: uppercase;
+    }
+        .signup-form {
+            width: 800px;
+            height: 700px;
+            padding: 4rem;
+            align-content: center;
+            background-color: aliceblue;
+            border-radius: 10px;
+            margin: ($space * 2) ($space * 2) 0;
+            box-shadow: 0 0 $space rgba(0, 0, 0, 0.03),
+                0 $space (
+                $space * 2) rgba(0, 0, 0, 0.05),
+                0 ($space * 2) ($space * 4) rgba(0, 0, 0, 0.05),
+                0 ($space * 4) ($space * 8) rgba(0, 0, 0, 0.05
+            );
+
+        ul {
+            margin: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 25rem;
+            padding: 1rem;
+            height: 55rem;
+
+            .age {
+            padding-right: 4.5rem;
+        }
+
+            li {
+                padding-bottom: 1rem;
+                list-style: none;
+                margin-bottom: 0rem;
+                opacity: 0;
+                animation: fadeInUp 1.5s 1.5s;
+                animation-fill-mode: forwards;
+                clear: both;
+            }
+        }
+
+        .nextButton {
+            button {
+            position: absolute;
+            left: 78%;
+            bottom: 2%;
+            width: 5rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-family: 'Medium';
+            color: aliceblue;
+            text-decoration: none;
+            }
+        }
+
+        .prevButton {
+            button {
+            position: absolute;
+            left: 5%;
+            bottom: 2%;
+            width: 5rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-family: 'Medium';
+            color: #fefefe;
+            text-decoration: none;
+            }
+        }
+    }
+}
+}
