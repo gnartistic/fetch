@@ -23,30 +23,27 @@ const font = {
 }
 
 //  array for age dropdown menu
-const age = [ '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65' ];
+const age = ['18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65'];
 
 //  array for gender choices in gender dropdown menu
-const gender = [ 'Man', 'Woman', 'Trans Man', 'Trans Woman', 'Non-binary', 'Other' ];
+const gender = ['Man', 'Woman', 'Trans Man', 'Trans Woman', 'Non-binary', 'Other'];
 
 // array for sexual preference dropdown menu
-const showMe = [ 'Men', 'Women', 'Everyone' ];
+const showMe = ['Men', 'Women', 'Everyone'];
 
 
 //component
-const UserDetails = ( { formData, setFormData } ) =>
-{
+const UserDetails = ({ formData, setFormData }) => {
     return (
 
         <ul>
-
             <li className='half'>
                 <TextField
                     label='Email Address'
                     type="text"
                     value={formData.email}
-                    onChange={( e ) =>
-                    {
-                        setFormData( { ...formData, email: e.target.value } );
+                    onChange={(e) => {
+                        setFormData({ ...formData, email: e.target.value });
                     }}
                     variant="outlined"
                     autoComplete='email'
@@ -61,9 +58,8 @@ const UserDetails = ( { formData, setFormData } ) =>
                     label='Username'
                     type="text"
                     value={formData.username}
-                    onChange={( e ) =>
-                    {
-                        setFormData( { ...formData, username: e.target.value } );
+                    onChange={(e) => {
+                        setFormData({ ...formData, username: e.target.value });
                     }}
                     variant="outlined"
                     fullWidth
@@ -77,8 +73,8 @@ const UserDetails = ( { formData, setFormData } ) =>
                 <TextField
                     label='Password'
                     value={formData.password}
-                    onChange={( event ) =>
-                        setFormData( { ...formData, password: event.target.value } )
+                    onChange={(event) =>
+                        setFormData({ ...formData, password: event.target.value })
                     }
                     variant="outlined"
                     autoComplete="password"
@@ -94,8 +90,8 @@ const UserDetails = ( { formData, setFormData } ) =>
                 <TextField
                     label='First name'
                     value={formData.firstName}
-                    onChange={( event ) =>
-                        setFormData( { ...formData, firstName: event.target.value } )
+                    onChange={(event) =>
+                        setFormData({ ...formData, firstName: event.target.value })
                     }
                     variant="outlined"
                     fullWidth
@@ -108,14 +104,14 @@ const UserDetails = ( { formData, setFormData } ) =>
                 <label className='age'>Age</label>
                 <Select
                     value={formData.age}
-                    onChange={( event ) =>
-                        setFormData( { ...formData, age: event.target.value } )
+                    onChange={(event) =>
+                        setFormData({ ...formData, age: event.target.value })
                     }
                     variant="outlined"
                     required
                     style={font}
                     MenuProps={MenuProps}>
-                    {age.map( ( age ) => (
+                    {age.map((age) => (
                         <MenuItem
                             key={age}
                             value={age}
@@ -123,7 +119,7 @@ const UserDetails = ( { formData, setFormData } ) =>
                         >
                             {age}
                         </MenuItem>
-                    ) )}
+                    ))}
                 </Select>
                 <FormHelperText>Must be 18 years or older to join.</FormHelperText>
             </li>
@@ -132,14 +128,14 @@ const UserDetails = ( { formData, setFormData } ) =>
                 <label>Gender</label>
                 <Select
                     value={formData.gender}
-                    onChange={( event ) =>
-                        setFormData( { ...formData, gender: event.target.value } )
+                    onChange={(event) =>
+                        setFormData({ ...formData, gender: event.target.value })
                     }
                     variant="outlined"
                     required
                     style={font}
                     MenuProps={MenuProps}>
-                    {gender.map( ( gender ) => (
+                    {gender.map((gender) => (
                         <MenuItem
                             key={gender}
                             value={gender}
@@ -147,7 +143,7 @@ const UserDetails = ( { formData, setFormData } ) =>
                         >
                             {gender}
                         </MenuItem>
-                    ) )}
+                    ))}
                 </Select>
                 <FormHelperText>Choose the option that fits you best.</FormHelperText>
             </li>
@@ -156,8 +152,8 @@ const UserDetails = ( { formData, setFormData } ) =>
                 <TextField
                     label='city'
                     value={formData.city}
-                    onChange={( event ) =>
-                        setFormData( { ...formData, city: event.target.value } )
+                    onChange={(event) =>
+                        setFormData({ ...formData, city: event.target.value })
                     }
                     variant="outlined"
                     fullWidth
@@ -170,8 +166,8 @@ const UserDetails = ( { formData, setFormData } ) =>
                 <TextField
                     label='state'
                     value={formData.state}
-                    onChange={( event ) =>
-                        setFormData( { ...formData, state: event.target.value } )
+                    onChange={(event) =>
+                        setFormData({ ...formData, state: event.target.value })
                     }
                     variant="outlined"
                     fullWidth
@@ -183,8 +179,8 @@ const UserDetails = ( { formData, setFormData } ) =>
                 <TextField
                     label='occupation'
                     value={formData.occupation}
-                    onChange={( event ) =>
-                        setFormData( { ...formData, occupation: event.target.value } )
+                    onChange={(event) =>
+                        setFormData({ ...formData, occupation: event.target.value })
                     }
                     variant="outlined"
                     fullWidth
@@ -197,14 +193,14 @@ const UserDetails = ( { formData, setFormData } ) =>
                 <label>Show me</label>
                 <Select
                     value={formData.showMe}
-                    onChange={( event ) =>
-                        setFormData( { ...formData, showMe: event.target.value } )
+                    onChange={(event) =>
+                        setFormData({ ...formData, showMe: event.target.value })
                     }
                     variant="outlined"
                     required
                     style={font}
                     MenuProps={MenuProps}>
-                    {showMe.map( ( showMe ) => (
+                    {showMe.map((showMe) => (
                         <MenuItem
                             key={showMe}
                             value={showMe}
@@ -212,7 +208,7 @@ const UserDetails = ( { formData, setFormData } ) =>
                         >
                             {showMe}
                         </MenuItem>
-                    ) )}
+                    ))}
                 </Select>
                 <FormHelperText>Only you can see this.</FormHelperText>
             </li>

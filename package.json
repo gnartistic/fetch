@@ -23,5 +23,9 @@
   "homepage": "https://github.com/gnartistic/fetch#readme",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.10.2",
+    "swiper": "^8.4.2"
   }
 }

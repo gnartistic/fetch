@@ -23,17 +23,16 @@ const font = {
 }
 
 // array for petAge dropdown menu
-const petAge = [ '<1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20' ];
+const petAge = ['<1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
 
 // array for petGender dropdown menu
-const petGender = [ 'Male', 'Female' ];
+const petGender = ['Male', 'Female'];
 
 // array for trais dropdown menu
-const personalityTraits = [ 'Confident', 'Outgoing', 'Adaptable', 'Shy', 'Independent', 'Aggressive', 'Lone Wolf', 'Timid', 'Laid-back', 'Playful', 'Goofy', 'Active', 'Socialable' ]
+const personalityTraits = ['Confident', 'Outgoing', 'Adaptable', 'Shy', 'Independent', 'Aggressive', 'Lone Wolf', 'Timid', 'Laid-back', 'Playful', 'Goofy', 'Active', 'Socialable']
 
 // pet details component, passing state
-const PetDetails = ( { formData, setFormData } ) =>
-{
+const PetDetails = ({ formData, setFormData }) => {
 
   return (
     <ul>
@@ -41,12 +40,11 @@ const PetDetails = ( { formData, setFormData } ) =>
       <li className='half'>
         <TextField
           label='Name'
-                    type="text"
-                    value={formData.petName}
-                    onChange={( e ) =>
-                    {
-                        setFormData( { ...formData, petName: e.target.value } );
-                    }}
+          type="text"
+          value={formData.petName}
+          onChange={(e) => {
+            setFormData({ ...formData, petName: e.target.value });
+          }}
           variant="outlined"
           size='small'
           fullWidth
@@ -57,16 +55,15 @@ const PetDetails = ( { formData, setFormData } ) =>
       <li className='half'>
         <label className='age'>Age</label>
         <Select
-        value={formData.petAge}
-                    onChange={( e ) =>
-                    {
-                        setFormData( { ...formData, petAge: e.target.value } );
-                    }}
+          value={formData.petAge}
+          onChange={(e) => {
+            setFormData({ ...formData, petAge: e.target.value });
+          }}
           variant="outlined"
           required
           style={font}
           MenuProps={MenuProps}>
-          {petAge.map( ( petAge ) => (
+          {petAge.map((petAge) => (
             <MenuItem
               key={petAge}
               value={petAge}
@@ -74,7 +71,7 @@ const PetDetails = ( { formData, setFormData } ) =>
             >
               {petAge}
             </MenuItem>
-          ) )}
+          ))}
         </Select>
       </li>
       {/* Gender input field */}
@@ -82,15 +79,14 @@ const PetDetails = ( { formData, setFormData } ) =>
         <label>Gender</label>
         <Select
           value={formData.petGender}
-                    onChange={( e ) =>
-                    {
-                        setFormData( { ...formData, petGender: e.target.value } );
-                    }}
+          onChange={(e) => {
+            setFormData({ ...formData, petGender: e.target.value });
+          }}
           variant="outlined"
           required
           style={font}
           MenuProps={MenuProps}>
-          {petGender.map( ( petGender ) => (
+          {petGender.map((petGender) => (
             <MenuItem
               key={petGender}
               value={petGender}
@@ -98,7 +94,7 @@ const PetDetails = ( { formData, setFormData } ) =>
             >
               {petGender}
             </MenuItem>
-          ) )}
+          ))}
         </Select>
       </li>
       {/* Breed input field */}
@@ -106,10 +102,9 @@ const PetDetails = ( { formData, setFormData } ) =>
         <TextField
           label='Breed'
           value={formData.petBreed}
-                    onChange={( e ) =>
-                    {
-                        setFormData( { ...formData, petBreed: e.target.value } );
-                    }}
+          onChange={(e) => {
+            setFormData({ ...formData, petBreed: e.target.value });
+          }}
           variant="outlined"
           fullWidth
           size='small'
@@ -121,10 +116,9 @@ const PetDetails = ( { formData, setFormData } ) =>
         <TextField
           label='Favorite Activity'
           value={formData.favActivity}
-                    onChange={( e ) =>
-                    {
-                        setFormData( { ...formData, favActivity: e.target.value } );
-                    }}
+          onChange={(e) => {
+            setFormData({ ...formData, favActivity: e.target.value });
+          }}
           variant="outlined"
           fullWidth
           size='small'
@@ -136,15 +130,14 @@ const PetDetails = ( { formData, setFormData } ) =>
         <label>Personality</label>
         <Select
           value={formData.personalityTraits}
-                    onChange={( e ) =>
-                    {
-                        setFormData( { ...formData, personalityTraits: e.target.value } );
-                    }}
+          onChange={(e) => {
+            setFormData({ ...formData, personalityTraits: e.target.value });
+          }}
           variant="outlined"
           required
           style={font}
           MenuProps={MenuProps}>
-          {personalityTraits.map( ( personalityTraits ) => (
+          {personalityTraits.map((personalityTraits) => (
             <MenuItem
               key={personalityTraits}
               value={personalityTraits}
@@ -152,7 +145,7 @@ const PetDetails = ( { formData, setFormData } ) =>
             >
               {personalityTraits}
             </MenuItem>
-          ) )}
+          ))}
         </Select>
       </li>
     </ul>

@@ -7,16 +7,21 @@ const bg = {
     background: '#fefefe'
 }
 
-const Home = () =>
-{
+const bg = {
+    width: '100%',
+    height: '100%',
+    background: '#fefefe'
+}
+
+const Home = () => {
     return (
         <>
             <div className='container home-page' style={bg}>
-                <Navbar/>
+                <Navbar />
             </div>
-            
+
             <Loader type="ball-pulse-sync" />
-            </>
+        </>
     )
 }
 
