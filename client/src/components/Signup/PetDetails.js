@@ -5,15 +5,15 @@ import { Select, TextField, MenuItem } from '@material-ui/core';
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 2.5 + ITEM_PADDING_TOP,
-      width: 100,
+    PaperProps: {
+        style: {
+            maxHeight: ITEM_HEIGHT * 2.5 + ITEM_PADDING_TOP,
+            width: 100,
       // custom imported font from app.scss
-      typography: 'Medium'
+            typography: 'Medium'
+        },
     },
-  },
-};
+  };
 
 // style prop for font styling on input fields, and the height and width of the outter drop down menus
 const font = {
@@ -36,126 +36,126 @@ const PetDetails = ( { formData, setFormData } ) =>
 {
 
   return (
-    <ul>
+              <ul>
       {/* name input field */}
-      <li className='half'>
-        <TextField
-          label='Name'
+                <li className='half'>
+                  <TextField
+                    label='Name'
                     type="text"
                     value={formData.petName}
                     onChange={( e ) =>
                     {
                         setFormData( { ...formData, petName: e.target.value } );
                     }}
-          variant="outlined"
-          size='small'
-          fullWidth
-          required
-        />
-      </li>
+                    variant="outlined"
+                    size='small'
+                    fullWidth
+                    required
+                  />
+                </li>
       {/* Age input field */}
-      <li className='half'>
-        <label className='age'>Age</label>
-        <Select
+                <li className='half'>
+                  <label className='age'>Age</label>
+                  <Select
         value={formData.petAge}
                     onChange={( e ) =>
                     {
                         setFormData( { ...formData, petAge: e.target.value } );
                     }}
-          variant="outlined"
-          required
-          style={font}
-          MenuProps={MenuProps}>
-          {petAge.map( ( petAge ) => (
-            <MenuItem
-              key={petAge}
-              value={petAge}
-              style={font}
-            >
-              {petAge}
-            </MenuItem>
-          ) )}
-        </Select>
-      </li>
+                    variant="outlined"
+                    required
+                    style={font}
+                    MenuProps={MenuProps}>
+                    {petAge.map( ( petAge ) => (
+                      <MenuItem
+                        key={petAge}
+                        value={petAge}
+                        style={font}
+                      >
+                        {petAge}
+                      </MenuItem>
+                    ) )}
+                  </Select>
+                </li>
       {/* Gender input field */}
-      <li className='half'>
-        <label>Gender</label>
-        <Select
+                <li className='half'>
+                  <label>Gender</label>
+                  <Select
           value={formData.petGender}
                     onChange={( e ) =>
                     {
                         setFormData( { ...formData, petGender: e.target.value } );
                     }}
-          variant="outlined"
-          required
-          style={font}
-          MenuProps={MenuProps}>
-          {petGender.map( ( petGender ) => (
-            <MenuItem
-              key={petGender}
-              value={petGender}
-              style={font}
-            >
-              {petGender}
-            </MenuItem>
-          ) )}
-        </Select>
-      </li>
+                    variant="outlined"
+                    required
+                    style={font}
+                    MenuProps={MenuProps}>
+                    {petGender.map( ( petGender ) => (
+                      <MenuItem
+                        key={petGender}
+                        value={petGender}
+                        style={font}
+                      >
+                        {petGender}
+                      </MenuItem>
+                    ) )}
+                  </Select>
+                </li>
       {/* Breed input field */}
-      <li>
-        <TextField
-          label='Breed'
+                <li>
+                  <TextField
+                    label='Breed'
           value={formData.petBreed}
                     onChange={( e ) =>
                     {
                         setFormData( { ...formData, petBreed: e.target.value } );
                     }}
-          variant="outlined"
-          fullWidth
-          size='small'
-          required
-        />
-      </li>
+                    variant="outlined"
+                    fullWidth
+                    size='small'
+                    required
+                  />
+                </li>
       {/* Favorite activity input field */}
-      <li>
-        <TextField
-          label='Favorite Activity'
+                <li>
+                  <TextField
+                    label='Favorite Activity'
           value={formData.favActivity}
                     onChange={( e ) =>
                     {
                         setFormData( { ...formData, favActivity: e.target.value } );
                     }}
-          variant="outlined"
-          fullWidth
-          size='small'
-          required
-        />
-      </li>
+                    variant="outlined"
+                    fullWidth
+                    size='small'
+                    required
+                  />
+                </li>
       {/* personality input field */}
-      <li className='half'>
-        <label>Personality</label>
-        <Select
+                <li className='half'>
+                  <label>Personality</label>
+                  <Select
           value={formData.personalityTraits}
                     onChange={( e ) =>
                     {
                         setFormData( { ...formData, personalityTraits: e.target.value } );
                     }}
-          variant="outlined"
-          required
-          style={font}
-          MenuProps={MenuProps}>
-          {personalityTraits.map( ( personalityTraits ) => (
-            <MenuItem
-              key={personalityTraits}
-              value={personalityTraits}
-              style={font}
-            >
-              {personalityTraits}
-            </MenuItem>
-          ) )}
-        </Select>
-      </li>
-    </ul>
+                    variant="outlined"
+                    required
+                    style={font}
+                    MenuProps={MenuProps}>
+                    {personalityTraits.map( ( personalityTraits ) => (
+                      <MenuItem
+                        key={personalityTraits}
+                        value={personalityTraits}
+                        style={font}
+                      >
+                        {personalityTraits}
+                      </MenuItem>
+                    ) )}
+                  </Select>
+                </li>
+              </ul>
   )
 }
 

@@ -11,7 +11,7 @@ import Auth from "../utils/auth";
 const bg = {
 	width: "100%",
 	height: "100%",
-	background: "linear-gradient(90deg, #25f497 0%,#12c9c3 50%, #059bf3 100%)",
+	background: "linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%)",
 };
 const Login = (props) => {
 	const [formState, setFormState] = useState({ email: "", password: "" });
