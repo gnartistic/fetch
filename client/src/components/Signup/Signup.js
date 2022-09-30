@@ -18,7 +18,7 @@ const Signup = () =>
     // page's state
     const [ page, setPage ] = useState( 0 );
 
-    // default formdata state
+    // default formData state
     const [ formData, setFormData ] = useState( {
         email: '',
         username: '',

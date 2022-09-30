@@ -23,16 +23,18 @@ export const ADD_USER = gql`
 		}
 	}
 `;
-export const MATCH = gql`
-	mutation addFriend($id: ID!) {
-		addFriend(friendId: $id) {
-			_id
-			username
-			friendCount
-			friends {
-				_id
-				username
-			}
-		}
-	}
-`;
+
+
+// export const MATCH = gql`
+// 	mutation matchFriend($id: ID!) {
+// 		addFriend(friendId: $id) {
+// 			_id
+// 			username
+// 			matchCount
+// 			matches {
+// 				_id
+// 				username
+// 			}
+// 		}
+// 	}
+// `;
