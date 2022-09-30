@@ -1,4 +1,5 @@
 $space: 1rem;
+$gradient: linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%);
 
 .form-zone {
     display: flex;
@@ -22,8 +23,7 @@ $space: 1rem;
         width: 800px;
         height: 680px;
         padding: 4rem;
-        justify-content: center;
-        background-color: #fefefe;
+        background-color: aliceblue;
         border-radius: 10px;
         margin: ($space * 2) ($space * 2) 0;
         box-shadow: 0 0 $space rgba(0, 0, 0, 0.03),
@@ -37,7 +37,7 @@ $space: 1rem;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        height: 60rem;
+        height: 60vh;
         padding: 2rem;
 
         label {
@@ -71,12 +71,12 @@ $space: 1rem;
         bottom: 5%;
             padding: 1rem;
             width: 10rem;
-            border-color: #fefefe;
+            border-color: aliceblue;
             border-radius: 25px;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #25f497 0%, #12c9c3 40%, #059bf3 100%);
+            background: $gradient;
             font-family: 'Medium';
-            color: #fefefe;
+            color: aliceblue;
             text-decoration: none;
 
             a {
@@ -98,14 +98,14 @@ $space: 1rem;
             border: none;
             border-radius: 25px;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #25f497 0%, #12c9c3 40%, #059bf3 100%);
+            background: $gradient;
             font-family: 'Medium';
-            color: #fefefe;
+            color: aliceblue;
             text-decoration: none;
 
             a {
                 font-family: 'Medium';
-                color: #fefefe;
+                color: aliceblue;
                 text-decoration: none;
                 }
             }
@@ -135,8 +135,8 @@ $space: 1rem;
             width: 800px;
             height: 700px;
             padding: 4rem;
-            justify-content: center;
-            background-color: #fefefe;
+            align-content: center;
+            background-color: aliceblue;
             border-radius: 10px;
             margin: ($space * 2) ($space * 2) 0;
             box-shadow: 0 0 $space rgba(0, 0, 0, 0.03),
@@ -147,12 +147,13 @@ $space: 1rem;
             );
 
         ul {
+            margin: 0;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: column;
             justify-content: space-around;
             width: 25rem;
-            padding: .5rem;
+            padding: 1rem;
             height: 55rem;
 
             .age {
@@ -180,9 +181,8 @@ $space: 1rem;
             border: none;
             border-radius: 25px;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #25f497 0%, #12c9c3 40%, #059bf3 100%);
             font-family: 'Medium';
-            color: #fefefe;
+            color: aliceblue;
             text-decoration: none;
             }
         }
@@ -197,7 +197,6 @@ $space: 1rem;
             border: none;
             border-radius: 25px;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #25f497 0%, #12c9c3 40%, #059bf3 100%);
             font-family: 'Medium';
             color: #fefefe;
             text-decoration: none;
