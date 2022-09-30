@@ -23,5 +23,9 @@
   "homepage": "https://github.com/gnartistic/fetch#readme",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "jwt-decode": "^3.1.2"
   }
 }

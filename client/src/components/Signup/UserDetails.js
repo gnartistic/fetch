@@ -38,6 +38,41 @@ const UserDetails = ( { formData, setFormData } ) =>
     return (
 
         <ul>
+<<<<<<< HEAD
+
+            <li className='half'>
+                <TextField
+                    label='Email Address'
+                    type="text"
+                    value={formData.email}
+                    onChange={( e ) =>
+                    {
+                        setFormData( { ...formData, email: e.target.value } );
+                    }}
+                    variant="outlined"
+                    autoComplete='email'
+                    fullWidth
+                    required
+                    size='small'
+                />
+                <FormHelperText>Please enter a valid email.</FormHelperText>
+            </li>
+            <li className='half'>
+                <TextField
+                    label='Username'
+                    type="text"
+                    value={formData.username}
+                    onChange={( e ) =>
+                    {
+                        setFormData( { ...formData, username: e.target.value } );
+                    }}
+                    variant="outlined"
+                    fullWidth
+                    size='small'
+                    required
+                />
+                <FormHelperText>Must be between 6-14 characters.</FormHelperText>
+=======
             <li className='half'>
                 <TextField
                     label='Email Address'
@@ -87,10 +122,48 @@ const UserDetails = ( { formData, setFormData } ) =>
                     required
                 />
                 <FormHelperText>Must be a minimum of 8 characters.</FormHelperText>
+>>>>>>> 8fff8941df7eefc4f3a4e234f9bb5700f101fb52
             </li>
 
             <li className='half'>
                 <TextField
+<<<<<<< HEAD
+                    label='Password'
+                    value={formData.password}
+                    onChange={( event ) =>
+                        setFormData( { ...formData, password: event.target.value } )
+                    }
+                    variant="outlined"
+                    autoComplete="password"
+                    fullWidth
+                    size='small'
+                    type="password"
+                    required
+                />
+                <FormHelperText>Must be a minimum of 8 characters.</FormHelperText>
+            </li>
+
+            <li className='half'>
+                <TextField
+                    label='First name'
+                    value={formData.firstName}
+                    onChange={( event ) =>
+                        setFormData( { ...formData, firstName: event.target.value } )
+                    }
+                    variant="outlined"
+                    fullWidth
+                    size='small'
+                    required
+                />
+            </li>
+
+            <li className='half'>
+                <label className='age'>Age</label>
+                <Select
+                    value={formData.age}
+                    onChange={( event ) =>
+                        setFormData( { ...formData, age: event.target.value } )
+=======
                     label='First name'
                     value={formData.firstName}
                     onChange={( event ) =>
@@ -133,11 +206,49 @@ const UserDetails = ( { formData, setFormData } ) =>
                     value={formData.gender}
                     onChange={( event ) =>
                         setFormData( { ...formData, gender: event.target.value } )
+>>>>>>> 8fff8941df7eefc4f3a4e234f9bb5700f101fb52
                     }
                     variant="outlined"
                     required
                     style={font}
                     MenuProps={MenuProps}>
+<<<<<<< HEAD
+                    {age.map( ( age ) => (
+                        <MenuItem
+                            key={age}
+                            value={age}
+                            style={font}
+                        >
+                            {age}
+                        </MenuItem>
+                    ) )}
+                </Select>
+                <FormHelperText>Must be 18 years or older to join.</FormHelperText>
+            </li>
+
+            <li className='half'>
+                <label>Gender</label>
+                <Select
+                    value={formData.gender}
+                    onChange={( event ) =>
+                        setFormData( { ...formData, gender: event.target.value } )
+                    }
+                    variant="outlined"
+                    required
+                    style={font}
+                    MenuProps={MenuProps}>
+                    {gender.map( ( gender ) => (
+                        <MenuItem
+                            key={gender}
+                            value={gender}
+                            style={font}
+                        >
+                            {gender}
+                        </MenuItem>
+                    ) )}
+                </Select>
+                <FormHelperText>Choose the option that fits you best.</FormHelperText>
+=======
                     {gender.map( ( gender ) => (
                         <MenuItem
                             key={gender}
@@ -163,8 +274,44 @@ const UserDetails = ( { formData, setFormData } ) =>
                     size='small'
                     required
                 />
+>>>>>>> 8fff8941df7eefc4f3a4e234f9bb5700f101fb52
             </li>
 
+            <li>
+                <TextField
+<<<<<<< HEAD
+                    label='city'
+                    value={formData.city}
+                    onChange={( event ) =>
+                        setFormData( { ...formData, city: event.target.value } )
+=======
+                    label='state'
+                    value={formData.state}
+                    onChange={( event ) =>
+                        setFormData( { ...formData, state: event.target.value } )
+                    }
+                    variant="outlined"
+                    fullWidth
+                    size='small'
+                    required
+                />
+            </li>
+            <li className='half'>
+                <TextField
+                    label='occupation'
+                    value={formData.occupation}
+                    onChange={( event ) =>
+                        setFormData( { ...formData, occupation: event.target.value } )
+>>>>>>> 8fff8941df7eefc4f3a4e234f9bb5700f101fb52
+                    }
+                    variant="outlined"
+                    fullWidth
+                    size='small'
+                    required
+                />
+            </li>
+
+<<<<<<< HEAD
             <li>
                 <TextField
                     label='state'
@@ -192,6 +339,8 @@ const UserDetails = ( { formData, setFormData } ) =>
                 />
             </li>
 
+=======
+>>>>>>> 8fff8941df7eefc4f3a4e234f9bb5700f101fb52
             <li className='half'>
                 <label>Show me</label>
                 <Select

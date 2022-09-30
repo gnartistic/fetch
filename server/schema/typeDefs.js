@@ -7,7 +7,7 @@ type User {
     _id: ID!
     username: String!
     email: String!
-    token: Stirng! 
+    token: String! 
     pets: [Pet]
 }
 
@@ -30,7 +30,7 @@ type Pet {
     gender: String
 }
 
-// TODO Querys below 
+// TODO Queries below 
 type Query {
     user(id: ID!):User
     users: [User!]
@@ -39,7 +39,7 @@ type Query {
 
 // TODO Mutations Below 
 type Mutation {
-    singup(singupInput: SignupInput): User
+    signup(signupInput: SignupInput): User
     login(loginInput: LoginInput): User 
 }
 
