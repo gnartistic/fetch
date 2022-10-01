@@ -13,9 +13,6 @@ const bg = {
     background: 'linear-gradient(90deg, #637dec 0%,#7068ce 20%, #7e55af 100%)'
 }
 
-const font = {
-    fontFamily: 'Medium'
-}
 const Navbar = () => {
     return (
         <>

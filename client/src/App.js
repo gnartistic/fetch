@@ -3,6 +3,7 @@ import './index.css';
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { ApolloProvider } from '@apollo/client';
 
 // import {
 //   ApolloClient,
@@ -14,7 +15,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Login from './components/Login';
 import Signup from './components/Signup/';
 import Home from './components/Home';
-import DirectMessaging from './components/Chat/';
+import { Chat, client } from './components/Chat/';
 // import { StoreProvider } from './utils/GlobalState';
 
 // const httpLink = createHttpLink({
@@ -38,8 +39,8 @@ import DirectMessaging from './components/Chat/';
 
 function App() {
   return (
-    // <ApolloProvider client={client}>
     <>
+    <ApolloProvider client={client}>
       <Router>
         <div>
           {/* <StoreProvider> */}
@@ -48,12 +49,12 @@ function App() {
             <Route path='Login' element={<Login />} />
             <Route path='Signup' element={<Signup />} />
             <Route path='Home' element={<Home />} />
-            <Route path='Chat' element={<DirectMessaging />} />
+            <Route path='Chat' element={<Chat />} />
           </Routes>
           {/* </StoreProvider> */}
         </div>
       </Router>
-      {/* </ApolloProvider> */}
+    </ApolloProvider>
     </>
   );
 }
