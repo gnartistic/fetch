@@ -6,8 +6,9 @@ const cardSchema = new Schema({
         type: String,
         required: true
     },
-    description: {
+    body: {
         type: String, 
     },
+    
 });
 module.exports = mongoose.model('Card', cardSchema); 
