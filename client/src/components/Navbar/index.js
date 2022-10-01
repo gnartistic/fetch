@@ -1,21 +1,9 @@
 import React from 'react'
 import './index.scss'
-<<<<<<< HEAD
-import Ball from '../../assets/images/invertedBall.png'
-
-// 
-
-const bg = {
-    height:'8rem',
-    width: '100%',
-    background: 'linear-gradient(90deg, #25f497 0%,#12c9c3 50%, #059bf3 100%)'
-}
-=======
 import { NavLink} from 'react-router-dom'
 import Ball from '../../assets/images/invertedBall.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faUser, faSquarePlus } from '@fortawesome/free-solid-svg-icons';
->>>>>>> 8fff8941df7eefc4f3a4e234f9bb5700f101fb52
 
 // 
 
@@ -30,14 +18,6 @@ const font = {
 }
 const Navbar = () => {
     return (
-<<<<<<< HEAD
-        <div className='nav' style={bg}>
-            <h1>
-                <img src={Ball} alt='fetch logo' />
-                Fetch
-                </h1>
-        </div>
-=======
         <>
         <div className='nav-bar2' style={bg}>
         
@@ -64,7 +44,6 @@ const Navbar = () => {
             </nav>
             </div>
             </>
->>>>>>> 8fff8941df7eefc4f3a4e234f9bb5700f101fb52
     )
 }
 

@@ -4,8 +4,8 @@ import Ball from "../../assets/images/invertedBall.png";
 import { Link } from "react-router-dom";
 import Loader from "react-loaders";
 import { useMutation } from "@apollo/client";
-import { LOGIN_USER } from "../utils/mutations";
-import Auth from "../utils/auth";
+import { LOGIN_USER } from "../../utils/mutations";
+import Auth from "../../utils/auth";
 
 // background color, for some reason I can only get it to render using css enclosed javascript
 const bg = {
