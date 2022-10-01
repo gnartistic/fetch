@@ -1,11 +1,12 @@
 const { Schema, model} = require("mongoose");
 
 const petSchema = new Schema({
+
     petName: {
         type: String,
         required: true,
     },
-    owner: {
+    name: {
         type: String, 
         required: true
     }, 
@@ -27,7 +28,6 @@ const petSchema = new Schema({
     },
     favActivity: {
         type: String,
-
     },
     createdAt: Date,
     updatedAt: Date

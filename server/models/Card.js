@@ -5,9 +5,10 @@ const cardSchema = new Schema({
         type: String,
         required: true
     },
-    description: {
+    body: {
         type: String, 
     },
+    
 });
 const Card = model('Card', cardSchema);
 
