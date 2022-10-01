@@ -15,6 +15,7 @@ input SignupInput {
     email: String
     password: String
 }
+
 input LoginInput {
     email: String
     password: String
