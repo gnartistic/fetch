@@ -27,10 +27,9 @@ export const ADD_USER = gql`
 
 // export const MATCH = gql`
 // 	mutation matchFriend($id: ID!) {
-// 		addFriend(friendId: $id) {
+// 		matchFriend(friendId: $id) {
 // 			_id
 // 			username
-// 			matchCount
 // 			matches {
 // 				_id
 // 				username

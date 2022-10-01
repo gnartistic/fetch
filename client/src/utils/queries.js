@@ -6,12 +6,26 @@ export const QUERY_USER = gql`
 			_id
 			username
 			email
-			friendCount
-			friends {
+			matchCount
+			pets{
+				petName
+				petAge
+				personalityTraits
+				breed
+				petGender
+				favActivity
+			}
+			matches {
 				_id
 				username
 			}
-
+			age
+			gender
+			showMe
+			city
+			state
+			occupation
+			
 		}
 	}
 `;
@@ -22,23 +36,25 @@ export const QUERY_ME = gql`
 			_id
 			username
 			email
-			friendCount
-			thoughts {
-				_id
-				thoughtText
-				createdAt
-				reactionCount
-				reactions {
-					_id
-					createdAt
-					reactionBody
-					username
-				}
+			matchCount
+			pets{
+				petName
+				petAge
+				personalityTraits
+				breed
+				petGender
+				favActivity
 			}
-			friends {
+			matches {
 				_id
 				username
 			}
+			age
+			gender
+			showMe
+			city
+			state
+			occupation
 		}
 	}
 `;
@@ -49,8 +65,8 @@ export const QUERY_ME_BASIC = gql`
 			_id
 			username
 			email
-			friendCount
-			friends {
+			matchCount
+			matches {
 				_id
 				username
 			}

@@ -45,6 +45,7 @@ const userSchema = new Schema(
         city: String,
         state: String,
         occupation: String,
+        matchCount: Number,
 		createdAt: Date,
 		updatedAt: Date,
 	},
