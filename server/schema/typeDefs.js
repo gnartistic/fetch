@@ -10,7 +10,7 @@ type User {
     token: String! 
     pets: [Pet]
 }
-
+// create users 
 input SignupInput {
     username: String
     email: String
@@ -21,6 +21,10 @@ input LoginInput {
     password: String
 }
 
+type Auth {
+    token: ID!
+    user: User
+}
 
 // TODO Pet input and type below 
 type Pet {
@@ -30,7 +34,14 @@ type Pet {
     gender: String
 }
 
-// TODO Queries below 
+
+// TODO Card inputs and type below 
+type Card {
+
+}
+
+// TODO Querys below 
+
 type Query {
     user(id: ID!):User
     users: [User!]
@@ -39,8 +50,8 @@ type Query {
 
 // TODO Mutations Below 
 type Mutation {
-    signup(signupInput: SignupInput): User
-    login(loginInput: LoginInput): User 
+    singup(singupInput: SignupInput): Auth
+    login(loginInput: LoginInput): Auth 
 }
 
 `;
