@@ -7,9 +7,6 @@ $space: 1rem;
 }
 
 .login-page {
-    transform-style: preserve-3d;
-    animation: fadeIn 1s forwards;
-    animation-delay: 1s;
     .logo-zone {
         display: flex;
         position: relative;
@@ -126,6 +123,8 @@ $space: 1rem;
     }
 }
 }
+
+// Media queries
 
 @media only screen and (max-width: 600px) {
     .login-page {

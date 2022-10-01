@@ -7,7 +7,7 @@ type User {
     _id: ID!
     username: String!
     email: String!
-    token: Stirng! 
+    token: String! 
     pets: [Pet]
 }
 // create users 
@@ -34,12 +34,14 @@ type Pet {
     gender: String
 }
 
+
 // TODO Card inputs and type below 
 type Card {
 
 }
 
 // TODO Querys below 
+
 type Query {
     user(id: ID!):User
     users: [User!]
