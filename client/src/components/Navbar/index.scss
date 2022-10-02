@@ -40,7 +40,7 @@
         a {
             text-decoration: none;
             color: #fefefe;
-            padding: 0 2rem 0 2rem;
+            padding: 0 2vw 0 3vw;
             margin-left: 2rem;
             text-align: center;
 
@@ -77,6 +77,13 @@
                 transition: all 0.3s ease-out;
             }
         }
+        
+        a.home-link {
+                &::after {
+                    font-family: 'Medium';
+                    content: 'HOME';
+                }
+            }
 
         a.chat-link {
             &::after {
@@ -93,6 +100,7 @@
         }
 
         a.following-link {
+            padding-left: 0 !important;
             &::after {
                 font-family: 'Medium';
                 content: 'FOLLOWING';
@@ -122,12 +130,11 @@
             position: absolute;
             left: calc(1vw);
             color: #fefefe;
-            justify-content: space-evenly;
+            justify-content: space-between;
 
             a {
                 text-decoration: none;
                 color: #fefefe;
-                padding: 0 2rem 0 2rem;
                 margin-left: 2rem;
                 text-align: center;
 
@@ -165,6 +172,13 @@
                 }
             }
 
+            a.home-link {
+                &::after {
+                    font-family: 'Medium';
+                    content: 'HOME';
+                }
+            }
+
             a.chat-link {
                 &::after {
                     font-family: 'Medium';
@@ -173,6 +187,7 @@
             }
 
             a.profile-link {
+                padding-right: 0 !important;
                 &::after {
                     font-family: 'Medium';
                     content: 'PROFILE';
@@ -180,6 +195,7 @@
             }
 
             a.following-link {
+                padding: 0 8vw 0 0 !important;
                 &::after {
                     font-family: 'Medium';
                     content: 'FOLLOWING';
@@ -209,17 +225,14 @@
             position: absolute;
             left: calc(2vw);
             color: #fefefe;
-            justify-content: space-evenly;
 
             a {
                 text-decoration: none;
                 color: #fefefe;
-                padding: 0 2rem 0 2rem;
                 margin-left: 2rem;
                 text-align: center;
 
                 .icon {
-                    align-self: center;
                     height: 3rem;
                     width: auto;
                     transition: all 0.3s ease-out;
@@ -250,12 +263,20 @@
                     -webkit-transition: all 0.3s ease-out;
                     transition: all 0.3s ease-out;
                 }
+                
             }
 
             a.chat-link {
                 &::after {
                     font-family: 'Medium';
                     content: 'CHAT';
+                }
+            }
+
+            a.home-link {
+                &::after {
+                    font-family: 'Medium';
+                    content: 'HOME';
                 }
             }
 
