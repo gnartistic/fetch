@@ -1,7 +1,7 @@
-import { ApolloClient, InMemoryCache, useMutation, useSubscription, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, useMutation, gql } from '@apollo/client';
 import { WebSocketLink } from "@apollo/client/link/ws";
-import { Container, Chip, Grid, TextField, Button } from '@material-ui/core';
-import Messages from '../Messages'
+import { Button } from '@material-ui/core';
+import Messages from './Messages'
 import React, { useState } from 'react';
 import './index.scss'
 import Navbar from '../Navbar'
