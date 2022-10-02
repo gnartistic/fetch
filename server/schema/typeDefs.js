@@ -2,7 +2,6 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
 
-// TODO User Input and types below 
 type User {
     _id: ID!
     username: String!
@@ -10,7 +9,7 @@ type User {
     token: String! 
     pets: [Pet]
 }
-// create users 
+
 input SignupInput {
     username: String
     email: String
@@ -26,7 +25,6 @@ type Auth {
     user: User
 }
 
-// TODO Pet input and type below 
 type Pet {
     _id: ID
     name: String
@@ -34,26 +32,28 @@ type Pet {
     gender: String
 }
 
-
-// TODO Card inputs and type below 
-type Card {
-
+type Message {
+    id: ID!
+    user: String!
+    text: String!
 }
-
-// TODO Querys below 
 
 type Query {
     user(id: ID!):User
     users: [User!]
     pets: [Pet]
-}
-
-// TODO Mutations Below 
-type Mutation {
-    singup(singupInput: SignupInput): Auth
     login(loginInput: LoginInput): Auth 
+    messages: [Message!]
 }
 
-`;
+type Mutations {
+    signup(signupInput: SignupInput): Auth
+    postMessage( user: String!, text: String!): ID!
+}
+
+type Subscription {
+    messages: [Message!]
+}
+`
 
 module.exports = typeDefs; 
