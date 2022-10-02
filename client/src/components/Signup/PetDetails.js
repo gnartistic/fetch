@@ -12,8 +12,7 @@ const MenuProps = {
       // custom imported font from app.scss
       typography: 'Medium'
     },
-  },
-};
+  };
 
 // style prop for font styling on input fields, and the height and width of the outter drop down menus
 const font = {
@@ -28,8 +27,9 @@ const petAge = ['<1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '
 // array for petGender dropdown menu
 const petGender = ['Male', 'Female'];
 
-// array for trais dropdown menu
-const personalityTraits = ['Confident', 'Outgoing', 'Adaptable', 'Shy', 'Independent', 'Aggressive', 'Lone Wolf', 'Timid', 'Laid-back', 'Playful', 'Goofy', 'Active', 'Socialable']
+// array for traits dropdown menu
+const personalityTraits = [ 'Confident', 'Outgoing', 'Adaptable', 'Shy', 'Independent', 'Aggressive', 'Lone Wolf', 'Timid', 'Laid-back', 'Playful', 'Goofy', 'Active', 'Socialable' ]
+
 
 // pet details component, passing state
 const PetDetails = ({ formData, setFormData }) => {

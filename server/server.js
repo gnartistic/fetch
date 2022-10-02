@@ -1,5 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server-express');
 const express = require('express');
+const { authMiddleware } = require('./utils/auth'); 
 //const mongoose = require('mongoose');
 
 // mongoose.connect(
