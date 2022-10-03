@@ -21,22 +21,6 @@ const resolvers = {
             .populate('pets')
 
             return userData
-        }, 
-
-        login: async (parent,{LoginInput: { email, password }}) => {
-            const user = await User.findOne({ email });
-
-            if(!user) {
-                throw new AuthenticationError('Yo this user does not exist!');
-            }
-            const correctPw = await user.isCorrectPassword(password);
-
-            if(!correctPw) {
-                throw new AuthenticationError('The password is incorrect! ')
-            }
-
-            const token = signToken(user);
-            return { token, user }; 
         },
         messages: () => messages, 
     },
@@ -53,7 +37,7 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user };
-            },
+        },
 
             postMessage: (parent, { user, text }) => {
                 const id = messages.length;
@@ -73,11 +57,11 @@ const resolvers = {
                 setTimeout(() => pubsub.publish(channel, { messages }), 0);
 
                 return pubsub.asyncIterator(channel); 
-            },
+        },
         },
     },
-        
-    }
+
+            }
 
 
 

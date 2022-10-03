@@ -1,6 +1,7 @@
 import Loader from 'react-loaders';
 import Navbar from '../Navbar'
 import Slider from './Slider';
+import Auth from '../../utils/auth';
 
 const bg = {
     width: '100%',
@@ -8,7 +9,11 @@ const bg = {
     background: '#fefefe'
 }
 
-const Home = () => {
+const Home = () =>
+{
+    
+    // const loggedIn = Auth.loggedIn();
+    
     return (
         <>
             <div className='page'>

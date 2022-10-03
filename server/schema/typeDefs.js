@@ -6,8 +6,7 @@ type User {
     _id: ID!
     username: String!
     email: String!
-    token: String! 
-    pets: [Pet]
+
 }
 
 input SignupInput {
