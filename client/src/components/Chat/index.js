@@ -5,6 +5,7 @@ import Messages from './Messages'
 import React, { useState } from 'react';
 import './index.scss'
 import Navbar from '../Navbar'
+import Loader from 'react-loaders';
 
 const link = new WebSocketLink( {
     uri: `ws://localhost:3001/`,
@@ -81,6 +82,7 @@ export const Chat = () =>
                 </div>
             </div>
             </div>
+            <Loader type="ball-pulse-sync" />
         </>
     )
 }

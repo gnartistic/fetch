@@ -1,0 +1,135 @@
+$space: 1rem;
+$gradient: linear-gradient(90deg, #637dec 0%, #7068ce 40%, #7e55af 100%);
+
+.container {
+    padding-top: 0 !important;
+}
+
+.friendlist {
+    font-family: 'Medium';
+    color: #444444;
+    height: 90vh;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    // padding-left: calc(5vw);
+    justify-content: center;
+
+    .friend-info {
+        display: inline-block;
+        padding: 2rem;
+        justify-content: space-between;
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin: ($space * 2) ($space * 2) 0;
+        box-shadow: 0 0 $space rgba(0, 0, 0, 0.03),
+            0 $space (
+            $space * 2) rgba(0, 0, 0, 0.05),
+            0 ($space * 2) ($space * 4) rgba(0, 0, 0, 0.05),
+            0 ($space * 4) ($space * 8) rgba(0, 0, 0, 0.05
+        );
+
+    .title-container {
+        text-align: left;
+
+        h2 {
+            font-family: 'Bold';
+            font-weight: 600;
+            text-align: center;
+            color: #444444;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-family: 'Bold';
+            font-weight: 600;
+            text-align: center;
+            color: #444444;
+            text-transform: uppercase;
+        }
+    }
+
+    button {
+        padding: 1rem;
+        width: 5vw;
+        align-self: center;
+        border-color: #fefefe;
+        border-radius: 25px;
+        text-transform: uppercase;
+        background: $gradient;
+        font-family: 'Medium';
+        color: #fefefe;
+        text-decoration: none;
+
+        a {
+            font-family: 'Medium';
+            color: #fefefe;
+            text-decoration: none;
+        }
+    }
+
+    .remove {
+        margin-left: calc(1vw) !important;
+    }
+
+}
+}
+
+@media only screen and (max-width: 600px) {
+    .friendlist {
+        height: 80vh;
+        margin-top: 10vh;
+
+        .friend-info {
+            padding: 1rem 18rem 1rem 1rem;
+            align-self: left;
+
+            .title-container {
+
+        h2 {
+            font-size: 1.5vh;
+            font-family: 'Bold';
+            font-weight: 500;
+            text-align: left;
+            color: #444444;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1vh;
+            padding: 0;
+            font-family: 'Medium';
+            font-weight: 400;
+            text-align: left;
+            color: #444444;
+            text-transform: uppercase;
+        }
+    }
+    button {
+        padding: .5rem;
+        width: 5vw;
+        align-self: left;
+        border-color: #fefefe;
+        border-radius: 25px;
+        text-transform: uppercase;
+        background: $gradient;
+        font-family: 'Medium';
+        color: #fefefe;
+        text-decoration: none;
+
+        a {
+            font-family: 'Medium';
+            color: #fefefe;
+            text-decoration: none;
+        }
+    }
+
+    .remove {
+        margin-left: calc(1vw) !important;
+    }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {}
