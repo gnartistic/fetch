@@ -9,7 +9,8 @@ import Auth from "../../utils/auth";
 
 // background color, for some reason I can only get it to render using css enclosed javascript
 const bg = {
-	width: "100%",
+
+width: "100%",
 	height: "100%",
 	background: "linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%)",
 };
