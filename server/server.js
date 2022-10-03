@@ -1,37 +1,33 @@
 const { ApolloServer, gql } = require('apollo-server-express');
+const { PubSub } = require ('graphql-subscriptions'); 
 const express = require('express');
+const path = require('path');
+
 const { authMiddleware } = require('./utils/auth'); 
-//const mongoose = require('mongoose');
-
-// mongoose.connect(
-// process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mango-api',
-// {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// }
-// );
-
-// // Use this to log mongo queries being executed!
-// mongoose.set('debug', true);
-
 const { typeDefs, resolvers } = require('./schema');
-//const db = require('./config.connection');
+const db = require('./config/connection');
 
-const app = express();
+const pubsub = new PubSub(); 
+
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: authMiddleware, pubsub
 });
+const app = express();
 
-const startApolloServer = async (typeDefs, resolvers) => {
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
+const startApolloServer = async ({ typeDefs, resolvers }) => {
     await server.start();
     server.applyMiddleware({ app });
 
-    app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
+    db.once('open', () => {
+    app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));    
+    })
 };
 
 startApolloServer(typeDefs, resolvers); 
