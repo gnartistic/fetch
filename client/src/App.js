@@ -2,7 +2,6 @@ import './App.scss';
 import './index.css';
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { ApolloProvider } from '@apollo/client';
 
 // import {
@@ -16,6 +15,8 @@ import Login from './components/Login';
 import Signup from './components/Signup/';
 import Home from './components/Home';
 import { Chat, client } from './components/Chat/';
+import Friends from './components/Friends';
+import Profile from './components/Profile';
 // import { StoreProvider } from './utils/GlobalState';
 
 // const httpLink = createHttpLink({
@@ -50,6 +51,8 @@ function App() {
             <Route path='Signup' element={<Signup />} />
             <Route path='Home' element={<Home />} />
             <Route path='Chat' element={<Chat />} />
+              <Route path='Friends' element={<Friends />} />
+              <Route path='Profile' element={<Profile />} />
           </Routes>
           {/* </StoreProvider> */}
         </div>

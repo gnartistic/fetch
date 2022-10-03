@@ -14,14 +14,11 @@
         font-size: 5rem;
         font-family: 'Bold';
         font-weight: 400;
-        animation: fadeIn 1s forwards;
 
         img {
-            opacity: 0;
+            opacity: 1;
             width: auto;
             height: 4rem;
-            animation: rollIn 1s linear both;
-            animation-delay: 1.3s;
             margin-bottom: -2px;
             padding-right: 2px;
         }
@@ -34,6 +31,7 @@
         position: absolute;
         top: 2rem;
         left: 60%;
+        right: calc(8vw);
         color: #fefefe;
         justify-content: space-around;
 
@@ -99,11 +97,10 @@
             }
         }
 
-        a.following-link {
-            padding-left: 0 !important;
+        a.friends-link {
             &::after {
                 font-family: 'Medium';
-                content: 'FOLLOWING';
+                content: 'FRIENDS';
             }
         }
     }
@@ -129,8 +126,9 @@
             display: flex;
             position: absolute;
             left: calc(1vw);
+            padding-right: calc(9vw);
             color: #fefefe;
-            justify-content: space-between;
+            justify-content: space-evenly;
 
             a {
                 text-decoration: none;
@@ -194,11 +192,10 @@
                 }
             }
 
-            a.following-link {
-                padding: 0 8vw 0 0 !important;
+            a.friends-link {
                 &::after {
                     font-family: 'Medium';
-                    content: 'FOLLOWING';
+                    content: 'FRIENDS';
                 }
             }
         }
@@ -224,6 +221,7 @@
             display: flex;
             position: absolute;
             left: calc(2vw);
+            padding-right: calc(8vw);
             color: #fefefe;
 
             a {
@@ -287,10 +285,10 @@
                 }
             }
 
-            a.following-link {
+            a.friends-link {
                 &::after {
                     font-family: 'Medium';
-                    content: 'FOLLOWING';
+                    content: 'FRIENDS';
                 }
             }
         }
