@@ -16,9 +16,9 @@ const bg = {
 const Login = (props) => {
 	const [formState, setFormState] = useState({ email: "", password: "" });
 
-	const [login, { error }] = useMutation(LOGIN_USER);
+	// const [login, { error }] = useMutation(LOGIN_USER);
 
-	// update state based on form input changes
+	 // update state based on form input changes
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 
@@ -28,20 +28,20 @@ const Login = (props) => {
 		});
 	};
 
-	// submit form
-	const handleFormSubmit = async (event) => {
-		event.preventDefault();
+	// // submit form
+	// const handleFormSubmit = async (event) => {
+	// 	event.preventDefault();
 
-		try {
-			const { data } = await login({
-				variables: { ...formState },
-			});
+	// 	try {
+	// 		const { data } = await login({
+	// 			variables: { ...formState },
+	// 		});
 
-			Auth.login(data.login.token);
-		} catch (e) {
-			console.error(e);
-		}
-	};
+	// 		Auth.login(data.login.token);
+	// 	} catch (e) {
+	// 		console.error(e);
+	// 	}
+	// };
 	return (
 		<>
 			{/* The container in layout.scss style from css enclosed javascript above */}
@@ -56,7 +56,8 @@ const Login = (props) => {
 				</div>
 				<div className="login-form">
 					<form
-                    onSubmit={handleFormSubmit}>
+                    
+					>
 						{/* need to update this to use MUI components. <textfield and <formcontrol  */}
 						<input
 							type="text"
