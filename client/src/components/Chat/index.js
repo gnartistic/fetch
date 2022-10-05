@@ -15,7 +15,7 @@ const font = {
 
 export const Chat = () =>
 {
-    const [ username, setUsername ] = useState( "" ); //initialize user
+    const [ user, setUser ] = useState( "" ); //initialize user
     const [ message, setMessage ] = useState( "" ); //initialize text
 
     // 1.
@@ -23,10 +23,10 @@ export const Chat = () =>
 
     const sendMessage = () =>
     {
-        if( message.length > 0 && username.length > 0 ) {
+        if( message.length > 0 && user.length > 0 ) {
             //calls the mutate function
             postMessage( {
-                variables: { username: username, message: message }
+                variables: { username: user, message: message }
             } )
             setMessage( "" ); //reset text field
         } else {
@@ -39,15 +39,19 @@ export const Chat = () =>
             <div className='page'>
                 <Navbar />
                 <div className='container chat-page'>
-                    <h3 style={font}>Welcome to your messages!</h3>
-                    <Messages user={username} />
+                    <div>
+                    <div className='messageList'>
+                        <h3 style={font}>Now chatting with {user}</h3>
+                            <Messages username={user} />
+                    </div>
+                    </div>
                     {/*add this block below*/}
                     <div className='messageContainer'>
                         <div className='messageInputZone'>
                             <input onChange={( e ) =>
                             {
-                                setUsername( e.target.value )
-                            }} value={username}
+                                setUser( e.target.value )
+                            }} value={user}
                                 required
                                 placeholder='username'
                                 label="Enter name" />

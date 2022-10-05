@@ -9,7 +9,7 @@ type User {
     email: String!
     token: String! 
     pets: [Pet]
-	friends: [Friends]
+	friends: [User]
     age: String!
 	gender: String!
 	showMe: String!
