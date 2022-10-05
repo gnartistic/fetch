@@ -24,6 +24,7 @@ const resolvers = {
             const userData = await User.findOne( {} )
                 .select( '__v-password' )
                 .populate( 'pets' )
+                .populate("friends");
 
             return userData
         },
