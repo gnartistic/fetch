@@ -1,122 +1,44 @@
-.ce-message-bubble {
-    background-color: #637dec !important;
-}
+.chat-page {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-.ce_message {
-    font-family: 'Medium' !important;
-    color: aliceblue;
-}
-
-.ce-chat-title-text,
-.ce-chat-subtitle-text,
-.ce-message-date-text,
-.ce-section-title-container {
-    color: #7068ce;
-    font-family: 'Medium' !important;
-}
-
-.ce-primary-button {
-    border-color: aliceblue !important;
-    color: aliceblue !important;
-    background-color: #7068ce !important;
-
-    svg {
-        fill: aliceblue !important;
+    h3{
+        color: #444;
+        padding: 1rem;
+        text-align: center;
     }
-}
+    .messageContainer{
+    position: absolute;
+    bottom: 1vh;
+    width: 100vw;
 
-.ce-chat-form-container {
-    background-color: aliceblue !important;
-
-    form {
-        input {
-            font-family: 'Medium';
-            color: #637dec !important;
-            border-color: #637dec !important;
-            background-color: aliceblue !important;
-        }
-    }
-
-    div {
-        div {
-            div {
+    .messageInputZone {
+        display: flex;
+        justify-content: center;
+    
+    input {
+                padding: .8rem;
+                background: #fefefe;
+                border-color: #44444437;
+                border-radius: 3px;
+                width: 40vw;
+                margin: .8rem;
                 font-family: 'Medium';
-                color: #637dec !important;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #444444;
+                opacity: 0.8;
             }
-        }
+
+    button {
+        align-self: center;
+        height: 5vh;
+        width: 5vw;
+        background-color: #637dec;
     }
 }
-
-.anticon,
-.anticon-close {
-    svg {
-        fill: rgb(209, 208, 208) !important;
     }
-}
-
-.ce-avatar-dot,
-.ce-avatar {
-    background-color: rgb(209, 208, 208) !important;
-}
-
-.ce-chat-unread-dot {
-    background-color: #7e55af !important;
-}
-
-.ce-chat-card {
-    margin-top: 1vh;
-}
-
-#ce-send-message-button {
-    background-color: #637dec !important;
-}
-
-svg {
-    fill: #637dec !important;
-}
-
-.ce-chat-settings-mobile-option {
-    div {
-        background-color: aliceblue !important;
-        font-family: 'Medium';
-        color: #637dec !important;
-    }
-}
-
-.ql-editor {
-    color: rgb(117, 117, 117);
-}
-
-.ce-chats-container,
-.ce-chat-feed-container,
-.ce-chat-title,
-.ql-editor,
-.ql-toolbar,
-.ql-snow,
-.ce-settings,
-.ce-input,
-.ce-section-title-container {
-    background-color: aliceblue !important;
-}
-
-#ce-options-drop-down {
-    div {
-        color: #7068ce;
-        font-family: 'Medium' !important;
-        background-color: aliceblue !important;
-    }
-}
-
-#ce-ice-breaker-text {
-    font-family: 'Medium' !important;
-}
-
-img#ce-ice-breaker-gif {
-    width: 0 !important;
-    height: 0 !important;
-}
-
-.ce-text-input {
-    font-family: 'Medium' !important;
-    color: rgb(117, 117, 117);
 }

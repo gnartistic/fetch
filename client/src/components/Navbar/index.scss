@@ -10,18 +10,15 @@
         position: fixed;
         top: -3%;
         padding-left: 3rem;
-        color: aliceblue;
+        color: #fefefe;
         font-size: 5rem;
         font-family: 'Bold';
         font-weight: 400;
-        animation: fadeIn 1s forwards;
 
         img {
-            opacity: 0;
+            opacity: 1;
             width: auto;
             height: 4rem;
-            animation: rollIn 1s linear both;
-            animation-delay: 1.3s;
             margin-bottom: -2px;
             padding-right: 2px;
         }
@@ -34,13 +31,14 @@
         position: absolute;
         top: 2rem;
         left: 60%;
-        color: aliceblue;
+        right: calc(8vw);
+        color: #fefefe;
         justify-content: space-around;
 
         a {
             text-decoration: none;
-            color: aliceblue;
-            padding: 0 2rem 0 2rem;
+            color: #fefefe;
+            padding: 0 2vw 0 3vw;
             margin-left: 2rem;
             text-align: center;
 
@@ -77,6 +75,13 @@
                 transition: all 0.3s ease-out;
             }
         }
+        
+        a.home-link {
+                &::after {
+                    font-family: 'Medium';
+                    content: 'HOME';
+                }
+            }
 
         a.chat-link {
             &::after {
@@ -92,10 +97,10 @@
             }
         }
 
-        a.following-link {
+        a.friends-link {
             &::after {
                 font-family: 'Medium';
-                content: 'FOLLOWING';
+                content: 'FRIENDS';
             }
         }
     }
@@ -121,13 +126,13 @@
             display: flex;
             position: absolute;
             left: calc(1vw);
-            color: aliceblue;
+            padding-right: calc(9vw);
+            color: #fefefe;
             justify-content: space-evenly;
 
             a {
                 text-decoration: none;
-                color: aliceblue;
-                padding: 0 2rem 0 2rem;
+                color: #fefefe;
                 margin-left: 2rem;
                 text-align: center;
 
@@ -165,6 +170,13 @@
                 }
             }
 
+            a.home-link {
+                &::after {
+                    font-family: 'Medium';
+                    content: 'HOME';
+                }
+            }
+
             a.chat-link {
                 &::after {
                     font-family: 'Medium';
@@ -173,16 +185,17 @@
             }
 
             a.profile-link {
+                padding-right: 0 !important;
                 &::after {
                     font-family: 'Medium';
                     content: 'PROFILE';
                 }
             }
 
-            a.following-link {
+            a.friends-link {
                 &::after {
                     font-family: 'Medium';
-                    content: 'FOLLOWING';
+                    content: 'FRIENDS';
                 }
             }
         }
@@ -208,18 +221,16 @@
             display: flex;
             position: absolute;
             left: calc(2vw);
-            color: aliceblue;
-            justify-content: space-evenly;
+            padding-right: calc(8vw);
+            color: #fefefe;
 
             a {
                 text-decoration: none;
-                color: aliceblue;
-                padding: 0 2rem 0 2rem;
+                color: #fefefe;
                 margin-left: 2rem;
                 text-align: center;
 
                 .icon {
-                    align-self: center;
                     height: 3rem;
                     width: auto;
                     transition: all 0.3s ease-out;
@@ -250,12 +261,20 @@
                     -webkit-transition: all 0.3s ease-out;
                     transition: all 0.3s ease-out;
                 }
+                
             }
 
             a.chat-link {
                 &::after {
                     font-family: 'Medium';
                     content: 'CHAT';
+                }
+            }
+
+            a.home-link {
+                &::after {
+                    font-family: 'Medium';
+                    content: 'HOME';
                 }
             }
 
@@ -266,10 +285,10 @@
                 }
             }
 
-            a.following-link {
+            a.friends-link {
                 &::after {
                     font-family: 'Medium';
-                    content: 'FOLLOWING';
+                    content: 'FRIENDS';
                 }
             }
         }

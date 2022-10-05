@@ -5,7 +5,6 @@ import PetDetails from './PetDetails'
 import './index.scss';
 import Loader from 'react-loaders';
 import { Button, FormControl } from '@material-ui/core';
-import Login from '../Login'
 
 // background, css enclosed in javascript
 const bg = {

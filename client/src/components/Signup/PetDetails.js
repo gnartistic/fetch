@@ -12,7 +12,11 @@ const MenuProps = {
       // custom imported font from app.scss
       typography: 'Medium'
     },
+<<<<<<< HEAD
   },
+=======
+  }
+>>>>>>> develop
 };
 
 // style prop for font styling on input fields, and the height and width of the outer drop down menus

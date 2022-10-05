@@ -1,52 +1,71 @@
-import { ChatEngine, getOrCreateChat } from 'react-chat-engine'
-import React, { useState } from 'react'
+import { useMutation} from '@apollo/client';
+import { Button } from '@material-ui/core';
+import Messages from './Messages'
+import React, { useState } from 'react';
 import './index.scss'
+import Navbar from '../Navbar'
+import Loader from 'react-loaders';
+import { POST_MESSAGE} from "../../utils/mutations";
 
-const Chat = () =>
+
+
+const font = {
+    fontFamily: 'Medium'
+}
+
+export const Chat = () =>
 {
-    // The useState hook initially sets the username to an empty string
-    const [ username, setUsername ] = useState( '' )
+    const [ username, setUsername ] = useState( "" ); //initialize user
+    const [ message, setMessage ] = useState( "" ); //initialize text
 
-    //Custom function that will implement the getOrCreateChat function that to select username to chat with
-    //only when the correct credentials(user secret, project id, username) are passed will the application be rendered
-    function implementingDirectChat ( credentials )
+    // 1.
+    const [ postMessage ] = useMutation( POST_MESSAGE )
+
+    const sendMessage = () =>
     {
-        getOrCreateChat(
-            credentials,
-            //function will only work if the app is a direct messaging one, hence setting 'is_direct_chat' to true and consequentially setting a list of usernames to search from. one
-            { is_direct_chat: true, usernames: [ username ] }, () => setUsername( '' )
-        )
-    }
-
-    const renderChatForm = ( credentials ) =>
-    {
-        return (
-            <>
-                <input
-                    type="text"
-                    placeholder='Username'
-                    value={username} //prop from the useState hook
-                    // A controlled function that sets the username to what the user types in the input field
-                    onChange={( e ) => setUsername( e.target.value )}
-                />
-
-                {/* clicking button will call the implementingDirectChat function that displays a list of usernames to create or find an existing chat.  */}
-                <button onClick={() => implementingDirectChat( credentials )}>
-                    Chat
-                </button>
-            </>
-        )
+        if( message.length > 0 && username.length > 0 ) {
+            //calls the mutate function
+            postMessage( {
+                variables: { username: username, message: message }
+            } )
+            setMessage( "" ); //reset text field
+        } else {
+            // need to make an error message
+        }
     }
 
     return (
-        <ChatEngine
-            height='100vh'
-            userName='gnartistic'
-            // accessing the stored env in the .env file
-            userSecret='Secret'
-            projectID='3a31985e-6035-459e-9061-8104c8a33da3'
-            displayNewChatInterface={( credentials ) => renderChatForm( credentials )} />
+        <>
+            <div className='page'>
+                <Navbar />
+                <div className='container chat-page'>
+                    <h3 style={font}>Welcome to your messages!</h3>
+                    <Messages user={username} />
+                    {/*add this block below*/}
+                    <div className='messageContainer'>
+                        <div className='messageInputZone'>
+                            <input onChange={( e ) =>
+                            {
+                                setUsername( e.target.value )
+                            }} value={username} size="small" fullWidth variant="outlined"
+                                required
+                                placeholder='username'
+                                label="Enter name" />
+
+                            <input onChange={( e ) =>
+                            {
+                                setMessage( e.target.value )
+                            }} value={message} size="small" fullWidth variant="outlined"
+                                required
+                                placeholder='message'
+                                style={font} label="Enter message here" />
+
+                            <Button onClick={sendMessage} fullWidth variant="contained" style={{ color: "white", fontFamily: 'Medium' }}>Send</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Loader type="ball-pulse-sync" />
+        </>
     )
 }
-
-export default Chat

@@ -25,8 +25,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "apollo-server-express": "^3.10.2",
-    "jsonwebtoken": "^8.5.1",
-    "swiper": "^8.4.2"
+    "graphql": "^16.6.0",
+    "jwt-decode": "^3.1.2"
   }
 }
