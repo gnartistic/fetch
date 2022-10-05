@@ -12,9 +12,10 @@ const MenuProps = {
       // custom imported font from app.scss
       typography: 'Medium'
     },
-  };
+  },
+};
 
-// style prop for font styling on input fields, and the height and width of the outter drop down menus
+// style prop for font styling on input fields, and the height and width of the outer drop down menus
 const font = {
   fontFamily: 'Medium',
   height: '3rem',

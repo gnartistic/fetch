@@ -2,7 +2,6 @@ import './App.scss';
 import './index.css';
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import {
 //   ApolloClient,

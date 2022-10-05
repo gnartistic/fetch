@@ -1,4 +1,4 @@
-const { User, Pets } = require('../models');
+const { User } = require('../models');
 const bcrypt = require('bcrypt');
 //const jwt = require('jsonwebtoken'); 
 const { signToken } = require('../utils/auth'); 
@@ -21,7 +21,7 @@ const resolvers = {
         }, 
     },
 
-    Mutations: {
+    Mutation: {
         // User mutations below for creating users and loging in a user 
         signup: async (parent,{signupInput: { username, email, password}}) => {
             password = await bcrypt.hash(password, 15);

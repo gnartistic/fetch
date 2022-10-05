@@ -59,6 +59,7 @@ const Signup = () =>
                         <div>{pageDisplay()}</div>
                         <div className='prevButton'>
                             <Button
+                                // eslint-disable-next-line eqeqeq
                                 disabled={page == 0}
                                 onClick={() =>
                                 {

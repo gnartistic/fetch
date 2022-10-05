@@ -9,27 +9,13 @@ type User {
     email: String!
     token: String! 
     pets: [Pet]
-    username
-	matchCount
-			pets{
-				petName
-				petAge
-				personalityTraits
-				breed
-				petGender
-				favActivity
-			}
-			matches {
-				_id
-				username
-			}
-			age
-			gender
-			showMe
-			city
-			state
-			occupation
-			
+	friends: [Friends]
+    age: String!
+	gender: String!
+	showMe: String!
+	city: String!
+	state: String!
+	occupation: String!
 }
 
 input SignupInput {
@@ -48,15 +34,20 @@ type Auth {
     user: User
 }
 
+type Friends {
+    _id:ID
+    username: String
+}
 
 type Pet {
     _id: ID
-    name: String
+    petName: String
     breed: String
-    gender: String
+    petGender: String
 }
 
 type Query {
+    me: User
     user(id: ID!):User
     users: [User!]
     pets: [Pet]
