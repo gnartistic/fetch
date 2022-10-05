@@ -78,8 +78,8 @@ export const GET_MESSAGES = gql`
     subscription {
         messages {
         id
-        user
-        text
+        username
+        message
         }
     }
 `;
