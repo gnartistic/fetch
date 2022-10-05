@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import UserDetails from './UserDetails'
 import PetDetails from './PetDetails'
 import './index.scss';
 import Loader from 'react-loaders';
-import { Button, FormControl } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import Auth from '../../utils/auth';
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../../utils/mutations';
 
 // background, css enclosed in javascript
 const bg = {
@@ -47,13 +50,35 @@ const Signup = () =>
         personalityTraits: ''
     } );
 
+    const [addUser] = useMutation(ADD_USER);
+
+    // submit form
+    const handleFormSubmit = async ( event ) =>
+    {
+        event.preventDefault();
+
+        try {
+            const { data } = await addUser( {
+                variables: { ...formData },
+            } );
+
+            Auth.login( data.addUser.token );
+        } catch( e ) {
+            console.error( e );
+        }
+    };
+
     // page titles
     const formTitles = [ "User Information", "Pet Information" ];
 
     //page rendering conditional statement
     const pageDisplay = () =>
     {
-        return page === 0 ? <UserDetails formData={formData} setFormData={setFormData} /> : <PetDetails formData={formData} setFormData={setFormData} />;
+        if( page === 0 ) {
+            return <UserDetails formData={formData} setFormData={setFormData} />;
+        } else {
+            return <PetDetails formData={formData} setFormData={setFormData} />;
+        }
     };
 
     // rendered page
@@ -61,7 +86,7 @@ const Signup = () =>
         <>
             <div className='signup-page container' style={bg}>
                 <div className='form-zone'>
-                    <FormControl className='signup-form'>
+                    <form className='signup-form' onSubmit={handleFormSubmit}>
                         {/* I'm using the page's current state as the title's index in array */}
                         <h1>{formTitles[ page ]}</h1>
                         {/* page's conditional statement */}
@@ -73,8 +98,8 @@ const Signup = () =>
                                     if( page == 0 ) {
                                         return navigateToLogin();
                                     }
-                                        // go back one page
-                                        setPage( ( currPage ) => currPage - 1 )
+                                    // go back one page
+                                    setPage( ( currPage ) => currPage - 1 )
                                 }
                                 }
                             >
@@ -83,13 +108,14 @@ const Signup = () =>
                         </div>
                         <div className='nextButton'>
                             <Button
+                                type='submit'
                                 onClick={() =>
-                                { 
+                                {
                                     // using the page's state as comparison with the title's index in array again
                                     // index starts at 0, so if the page = 2, then the index needs to be 1 to match, that's why formTitles.length -1
                                     if( page === formTitles.length - 1 ) {
                                         console.log( formData );
-                                        return navigateToLogin();
+                                        return formData;
                                     } else {
                                         setPage( ( currPage ) => currPage + 1 );
                                     }
@@ -98,7 +124,7 @@ const Signup = () =>
                                 {page === formTitles.length - 1 ? "Submit" : "Next"}
                             </Button>
                         </div>
-                    </FormControl>
+                    </form>
                 </div>
             </div>
             <Loader type="ball-pulse-sync" />

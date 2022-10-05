@@ -89,8 +89,7 @@ const Login = ( props ) =>
 							onChange={handleChange}
 						/>
 
-						<button className="signIn" type="submit">
-							{/* <Link to='/home'>Sign in</Link> */}
+						<button className="signIn" type="submit">Sign in
 						</button>
 						{/* link to signup component */}
 						<button className="createAccount">

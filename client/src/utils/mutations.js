@@ -51,3 +51,9 @@ mutation removeFriend($id: ID!) {
     }
 }
 `;
+
+export const POST_MESSAGE = gql`
+    mutation postMessage($username:String!, $message:String!){
+    postMessage(username:$username, message:$message)
+    }
+`;

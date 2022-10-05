@@ -1,36 +1,66 @@
-const { ApolloServer, gql } = require('apollo-server-express');
-const { PubSub } = require ('graphql-subscriptions'); 
-const express = require('express');
-const path = require('path');
+const { ApolloServer } = require( 'apollo-server-express' );
+const { PubSub } = require( 'graphql-subscriptions' );
+const express = require( 'express' );
+const { authMiddleware } = require( './utils/auth' );
+const { typeDefs, resolvers } = require( './schema' );
+const db = require( './config/connection' );
+const { createServer } = require( 'http' );
+const { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageLocalDefault } = require( 'apollo-server-core' );
+const { makeExecutableSchema } = require( '@graphql-tools/schema' );
+const { WebSocketServer } = require( 'ws' );
+const { useServer } = require( 'graphql-ws/lib/use/ws' );
 
-const { authMiddleware } = require('./utils/auth'); 
-const { typeDefs, resolvers } = require('./schema');
-const db = require('./config/connection');
+const pubsub = new PubSub();
 
-const pubsub = new PubSub(); 
-
+const schema = makeExecutableSchema( { typeDefs, resolvers } );
 const PORT = process.env.PORT || 3001;
-const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    context: authMiddleware, pubsub
-});
+
 const app = express();
+app.use( express.json() );
+app.use( express.urlencoded( { extended: true } ) );
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+const httpServer = createServer( app );
+
+const wsServer = new WebSocketServer( {
+    server: httpServer,
+    path: '/subscriptions',
+} );
+
+const serverCleanup = useServer( { schema }, wsServer );
+const server = new ApolloServer( {
+    schema,
+    csrfPrevention: true,
+    cache: "bounded",
+    plugins: [ ApolloServerPluginDrainHttpServer( { httpServer } ),
+    {
+        async serverWillStart ()
+        {
+            return {
+                async drainServer ()
+                {
+                    await serverCleanup.dispose();
+                },
+            };
+        },
+    },
+    ApolloServerPluginLandingPageLocalDefault( { embed: true } ),
+    ],
+    context: authMiddleware, pubsub
+} );
 
 
-const startApolloServer = async ({ typeDefs, resolvers }) => {
+const startApolloServer = async ( { typeDefs, resolvers } ) =>
+{
     await server.start();
-    server.applyMiddleware({ app });
+    server.applyMiddleware( { app } );
 
-    db.once('open', () => {
-    app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));    
-    })
+    db.once( 'open', () =>
+    {
+        httpServer.listen( PORT, () => console.log( `🌍 Connected on localhost:${ PORT }${server.graphqlPath}`, ) );
+    } )
 };
 
-startApolloServer(typeDefs, resolvers); 
+startApolloServer( typeDefs, resolvers );
 
 
 

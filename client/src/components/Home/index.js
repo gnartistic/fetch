@@ -1,6 +1,6 @@
 import Loader from 'react-loaders';
 import Navbar from '../Navbar'
-import Slider from './Slider';
+// import Slider from './Slider';
 import Auth from '../../utils/auth';
 
 const bg = {
@@ -19,7 +19,7 @@ const Home = () =>
             <div className='page'>
                 <Navbar />
             <div className='container home-page' style={bg}>
-                <Slider />
+                {/* <Slider /> */}
             </div>
 
                 <Loader type="ball-pulse-sync" />

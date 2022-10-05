@@ -1,42 +1,44 @@
 import './App.scss';
 import './index.css';
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloProvider } from '@apollo/client';
-
-// import {
-//   ApolloClient,
-//   InMemoryCache,
-//   ApolloProvider,
-//   createHttpLink,
-// } from '@apollo/client';
-// import { setContext } from '@apollo/client/link/context';
 import Login from './components/Login';
 import Signup from './components/Signup/';
 import Home from './components/Home';
-import { Chat, client } from './components/Chat/';
+import { Chat } from './components/Chat/';
 import Friends from './components/Friends';
 import Profile from './components/Profile';
-// import { StoreProvider } from './utils/GlobalState';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
-// const httpLink = createHttpLink({
-//   uri: '/graphql',
-// });
+import { ApolloProvider, split, HttpLink, ApolloClient, InMemoryCache } from '@apollo/client';
+import { getMainDefinition } from '@apollo/client/utilities';
+import { GraphQLWsLink } from '@apollo/client/link/subscriptions';
+import { createClient } from 'graphql-ws';
 
-// const authLink = setContext((_, { headers }) => {
-//   const token = localStorage.getItem('id_token');
-//   return {
-//     headers: {
-//       ...headers,
-//       authorization: token ? `Bearer ${token}` : '',
-//     },
-//   };
-// });
+const httpLink = new HttpLink( {
+  uri: 'http://localhost:3001/graphql'
+} );
 
-// const client = new ApolloClient({
-//   link: authLink.concat(httpLink),
-//   cache: new InMemoryCache(),
-// });
+const wsLink = new GraphQLWsLink( createClient( {
+  url: 'ws://localhost:3001/subscriptions',
+} ) );
+
+const splitLink = split(
+  ( { query } ) =>
+  {
+    const definition = getMainDefinition( query );
+    return (
+      definition.kind === 'OperationDefinition' &&
+      definition.operation === 'subscription'
+    );
+  },
+  wsLink,
+  httpLink,
+);
+
+const client = new ApolloClient( {
+  link: splitLink,
+  cache: new InMemoryCache()
+} );
+
 
 function App() {
   return (
@@ -44,7 +46,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          {/* <StoreProvider> */}
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path='Login' element={<Login />} />
@@ -54,7 +55,6 @@ function App() {
               <Route path='Friends' element={<Friends />} />
               <Route path='Profile' element={<Profile />} />
           </Routes>
-          {/* </StoreProvider> */}
         </div>
       </Router>
     </ApolloProvider>
