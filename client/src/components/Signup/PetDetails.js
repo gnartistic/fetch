@@ -13,7 +13,7 @@ const MenuProps = {
       typography: 'Medium'
     },
   }
-  };
+};
 
 // style prop for font styling on input fields, and the height and width of the outter drop down menus
 const font = {

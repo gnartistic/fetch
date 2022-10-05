@@ -73,3 +73,13 @@ export const QUERY_ME_BASIC = gql`
 		}
 	}
 `;
+
+export const GET_MESSAGES = gql`
+    subscription {
+        messages {
+        id
+        user
+        text
+        }
+    }
+`;

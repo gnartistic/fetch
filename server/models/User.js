@@ -38,7 +38,7 @@ const userSchema = new Schema(
             type: String,
             enum: [ 'Man', 'Woman', 'Trans Man', 'Trans Woman', 'Non-binary', 'Other' ],
 
-        },
+		},
         showMe: {
             type: String,
         },

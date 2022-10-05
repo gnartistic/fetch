@@ -1,4 +1,5 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require( 'apollo-server-express' );
+
 
 const typeDefs = gql`
 
@@ -6,6 +7,7 @@ type User {
     _id: ID!
     username: String!
     email: String!
+    friends: [User]
 
 }
 
@@ -14,7 +16,6 @@ input SignupInput {
     email: String
     password: String
 }
-
 
 input LoginInput {
     email: String
@@ -35,21 +36,22 @@ type Pet {
 
 type Message {
     id: ID!
-    user: String!
-    text: String!
+    username: String!
+    message: String!
 }
 
 type Query {
     user(id: ID!):User
     users: [User!]
     pets: [Pet]
-    login(loginInput: LoginInput): Auth 
     messages: [Message!]
 }
 
-type Mutations {
-    signup(signupInput: SignupInput): Auth
-    postMessage( user: String!, text: String!): ID!
+type Mutation {
+    postMessage( username: String!, message: String!): ID!
+    login(email: String!, password: String!): Auth
+    addFriend(friendId: ID!): User
+    addUser(username: String!, email: String!, password: String!): Auth
 }
 
 type Subscription {
