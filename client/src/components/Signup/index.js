@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import UserDetails from './UserDetails'
 import PetDetails from './PetDetails'
 import './index.scss';
 import Loader from 'react-loaders';
 import { Button } from '@material-ui/core';
-import { useMutation } from "@apollo/client";
-import { ADD_USER } from "../../utils/mutations";
-import Auth from '../../utils/auth'
+import Auth from '../../utils/auth';
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../../utils/mutations';
+
 // background, css enclosed in javascript
 const bg = {
     width: '100%',
@@ -49,13 +50,35 @@ const Signup = () =>
         personalityTraits: ''
     } );
 
+    const [addUser] = useMutation(ADD_USER);
+
+    // submit form
+    const handleFormSubmit = async ( event ) =>
+    {
+        event.preventDefault();
+
+        try {
+            const { data } = await addUser( {
+                variables: { ...formData },
+            } );
+
+            Auth.login( data.addUser.token );
+        } catch( e ) {
+            console.error( e );
+        }
+    };
+
     // page titles
     const formTitles = [ "User Information", "Pet Information" ];
 
     //page rendering conditional statement
     const pageDisplay = () =>
     {
-        return page === 0 ? <UserDetails formData={formData} setFormData={setFormData} /> : <PetDetails formData={formData} setFormData={setFormData} />;
+        if( page === 0 ) {
+            return <UserDetails formData={formData} setFormData={setFormData} />;
+        } else {
+            return <PetDetails formData={formData} setFormData={setFormData} />;
+        }
     };
 
     const [addUser, { error }] = useMutation(ADD_USER);
@@ -94,8 +117,8 @@ const Signup = () =>
                                     if( page == 0 ) {
                                         return navigateToLogin();
                                     }
-                                        // go back one page
-                                        setPage( ( currPage ) => currPage - 1 )
+                                    // go back one page
+                                    setPage( ( currPage ) => currPage - 1 )
                                 }
                                 }
                             >
@@ -104,9 +127,9 @@ const Signup = () =>
                         </div>
                         <div className='nextButton'>
                             <Button
-                                type="Submit"
+                                type='submit'
                                 onClick={() =>
-                                { 
+                                {
                                     // using the page's state as comparison with the title's index in array again
                                     // index starts at 0, so if the page = 2, then the index needs to be 1 to match, that's why formTitles.length -1
                                     if( page === formTitles.length - 1 ) {
