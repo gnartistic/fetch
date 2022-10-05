@@ -1,5 +1,5 @@
-const { User, Pets } = require( '../models' );
-const bcrypt = require( 'bcrypt' );
+const { User } = require('../models');
+const bcrypt = require('bcrypt');
 //const jwt = require('jsonwebtoken'); 
 const { signToken } = require( '../utils/auth' );
 const { AuthenticationError } = require( 'apollo-server-express' );

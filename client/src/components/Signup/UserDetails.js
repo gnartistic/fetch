@@ -1,6 +1,8 @@
 import './index.scss';
 import './index.scss';
 import { Select, TextField, MenuItem, FormHelperText } from '@material-ui/core';
+import React from "react";
+
 
 // css style for inner dropdown menu
 const ITEM_HEIGHT = 48;
@@ -34,6 +36,7 @@ const showMe = ['Men', 'Women', 'Everyone'];
 
 //component
 const UserDetails = ({ formData, setFormData }) => {
+
     return (
 
         <ul>
@@ -212,7 +215,9 @@ const UserDetails = ({ formData, setFormData }) => {
                 </Select>
                 <FormHelperText>Only you can see this.</FormHelperText>
             </li>
+            
         </ul>
+
     )
 }
 

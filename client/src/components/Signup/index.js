@@ -4,8 +4,10 @@ import UserDetails from './UserDetails'
 import PetDetails from './PetDetails'
 import './index.scss';
 import Loader from 'react-loaders';
-import { Button, FormControl } from '@material-ui/core';
-
+import { Button } from '@material-ui/core';
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../../utils/mutations";
+import Auth from '../../utils/auth'
 // background, css enclosed in javascript
 const bg = {
     width: '100%',
@@ -56,12 +58,31 @@ const Signup = () =>
         return page === 0 ? <UserDetails formData={formData} setFormData={setFormData} /> : <PetDetails formData={formData} setFormData={setFormData} />;
     };
 
+    const [addUser, { error }] = useMutation(ADD_USER);
+
+	// submit form
+	const handleFormSubmit = async (event) => {
+		event.preventDefault();
+
+		// use try/catch instead of promises to handle errors
+		try {
+			// execute addUser mutation and pass in variable data from form
+			const { data } = await addUser({
+				variables: { ...formData },
+			});
+			Auth.login(data.addUser.token);
+		} catch (e) {
+			console.error(e);
+		}
+	};
+    
     // rendered page
     return (
         <>
             <div className='signup-page container' style={bg}>
                 <div className='form-zone'>
-                    <FormControl className='signup-form'>
+                    <form className='signup-form'
+                    onClick={handleFormSubmit}>
                         {/* I'm using the page's current state as the title's index in array */}
                         <h1>{formTitles[ page ]}</h1>
                         {/* page's conditional statement */}
@@ -83,13 +104,14 @@ const Signup = () =>
                         </div>
                         <div className='nextButton'>
                             <Button
+                                type="Submit"
                                 onClick={() =>
                                 { 
                                     // using the page's state as comparison with the title's index in array again
                                     // index starts at 0, so if the page = 2, then the index needs to be 1 to match, that's why formTitles.length -1
                                     if( page === formTitles.length - 1 ) {
                                         console.log( formData );
-                                        return navigateToLogin();
+                                        return formData;
                                     } else {
                                         setPage( ( currPage ) => currPage + 1 );
                                     }
@@ -98,7 +120,8 @@ const Signup = () =>
                                 {page === formTitles.length - 1 ? "Submit" : "Next"}
                             </Button>
                         </div>
-                    </FormControl>
+                        {error && <div>signup failed</div>}
+                    </form>
                 </div>
             </div>
             <Loader type="ball-pulse-sync" />

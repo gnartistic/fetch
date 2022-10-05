@@ -1,6 +1,6 @@
 import Loader from 'react-loaders';
 import Navbar from '../Navbar'
-// import Slider from './Slider';
+// import Swiper from '../Swiper';
 import Auth from '../../utils/auth';
 
 const bg = {

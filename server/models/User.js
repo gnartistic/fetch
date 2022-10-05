@@ -21,9 +21,7 @@ const userSchema = new Schema(
 			required: true,
 			minlength: 5,
 		},
-		pets: [
-			petSchema
-		],
+		pets: [petSchema],
 		matches: [
 			{
 				type: Schema.Types.ObjectId,

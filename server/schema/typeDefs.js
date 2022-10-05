@@ -7,8 +7,15 @@ type User {
     _id: ID!
     username: String!
     email: String!
-    friends: [User]
-
+    token: String! 
+    pets: [Pet]
+	friends: [Friends]
+    age: String!
+	gender: String!
+	showMe: String!
+	city: String!
+	state: String!
+	occupation: String!
 }
 
 input SignupInput {
@@ -29,9 +36,9 @@ type Auth {
 
 type Pet {
     _id: ID
-    name: String
+    petName: String
     breed: String
-    gender: String
+    petGender: String
 }
 
 type Message {
@@ -41,6 +48,7 @@ type Message {
 }
 
 type Query {
+    me: User
     user(id: ID!):User
     users: [User!]
     pets: [Pet]
@@ -59,4 +67,4 @@ type Subscription {
 }
 `
 
-module.exports = typeDefs; 
+module.exports = typeDefs;
