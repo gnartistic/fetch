@@ -1,16 +1,7 @@
 import React from 'react'
 import { useSubscription, gql } from '@apollo/client'
 import { Chip } from '@material-ui/core';
-
-const GET_MESSAGES = gql`
-    subscription {
-        messages {
-        id
-        user
-        text
-        }
-    }
-`;
+import { GET_MESSAGES } from "../../utils/queries";
 
 const Messages = ( { user } ) =>
 {
