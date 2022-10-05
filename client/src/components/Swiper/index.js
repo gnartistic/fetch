@@ -64,7 +64,7 @@ const Swiper = () => {
 						key={index}
 						className="swipe"
 						onSwipe={onSwipe}
-						onCardLeftScreen={() => onCardLeftScreen("fooBar")}
+						onCardLeftScreen={() => onCardLeftScreen("Match")}
 						preventSwipe={["up", "down"]}
 					>
 						<ImgDiv

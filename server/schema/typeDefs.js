@@ -34,6 +34,11 @@ type Auth {
     user: User
 }
 
+type Friends {
+    _id: ID
+    username: String
+}
+
 type Pet {
     _id: ID
     petName: String
