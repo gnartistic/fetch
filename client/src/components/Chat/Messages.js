@@ -1,35 +1,29 @@
 import React from 'react'
-import { useSubscription, gql } from '@apollo/client'
+import { useSubscription } from '@apollo/client'
 import { Chip } from '@material-ui/core';
+import { GET_MESSAGES } from "../../utils/queries";
+import './index.scss'
 
-const GET_MESSAGES = gql`
-    subscription {
-        messages {
-        id
-        user
-        text
-        }
-    }
-`;
-
-const Messages = ( { user } ) =>
+const Messages = ( { username } ) =>
 {
     const { data } = useSubscription( GET_MESSAGES )
     if( !data ) {
         return null;
     }
     return (
+        <>
         <div style={{ marginBottom: "5rem" }}>
-            {data.messages.map( ( { id, user: messageUser, text } ) =>
+            {data.messages.map( ( { id, username: messageUser, message } ) =>
             {
                 return (
-                    <div key={id} style={{ textAlign: user === messageUser ? "right" : "left" }}>
-                        <p style={{ marginBottom: "0.3rem" }}>{messageUser}</p>
-                        <Chip style={{ fontSize: "0.9rem" }} color={user === messageUser ? "primary" : "secondary"} label={text} />
+                    <div className="messageList" key={id} style={{ textAlign: username === messageUser ? "left" : "right" }}>
+                        <p style={{fontFamily:"Medium", marginBottom: ".3vw", marginRight:"5vw" }}>{messageUser}</p>
+                        <Chip style={{fontFamily:"Medium", fontSize: "0.9rem", marginBottom: ".5vw", marginRight:"4.5vw"}} color={username === messageUser ? "#637dec" : "#444"} label={message} />
                     </div>
                 )
             } )}
-        </div>
+            </div>
+            </>
     )
 }
 

@@ -47,7 +47,7 @@ export const Chat = () =>
                             <input onChange={( e ) =>
                             {
                                 setUsername( e.target.value )
-                            }} value={username} size="small" fullWidth variant="outlined"
+                            }} value={username}
                                 required
                                 placeholder='username'
                                 label="Enter name" />
@@ -55,12 +55,12 @@ export const Chat = () =>
                             <input onChange={( e ) =>
                             {
                                 setMessage( e.target.value )
-                            }} value={message} size="small" fullWidth variant="outlined"
+                            }} value={message}
                                 required
                                 placeholder='message'
                                 style={font} label="Enter message here" />
 
-                            <Button onClick={sendMessage} fullWidth variant="contained" style={{ color: "white", fontFamily: 'Medium' }}>Send</Button>
+                            <Button onClick={sendMessage}  variant="contained" style={{ color: "white", fontFamily: 'Medium' }}>Send</Button>
                         </div>
                     </div>
                 </div>
