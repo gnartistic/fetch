@@ -80,6 +80,7 @@ const Signup = () =>
             return <PetDetails formData={formData} setFormData={setFormData} />;
         }
     };
+    
     // rendered page
     return (
         <>
@@ -124,7 +125,6 @@ const Signup = () =>
                                 {page === formTitles.length - 1 ? "Submit" : "Next"}
                             </Button>
                         </div>
-                        {error && <div>signup failed</div>}
                     </form>
                 </div>
             </div>

@@ -10,12 +10,12 @@ type User {
     token: String
     pets: [Pet]
 	friends: [User]
-    age: String
-	gender: String
-	showMe: String
-	city: String
-	state: String
-	occupation: String
+    age: String!
+	gender: String!
+	showMe: String!
+	city: String!
+	state: String!
+	occupation: String!
 }
 
 input SignupInput {

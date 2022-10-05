@@ -12,14 +12,14 @@ const Messages = ( { username } ) =>
     }
     return (
         <>
-        <div style={{ marginBottom: "5rem" }}>
+        <div style={{ paddingBottom: "20vh" }}>
             {data.messages.map( ( { id, username: messageUser, message } ) =>
             {
                 return (
-                    <div className="messageList" key={id} style={{ textAlign: username === messageUser ? "left" : "right" }}>
+                    <div key={id} style={{textAlign: username === messageUser ? "right" : "left" }}>
                         <p style={{fontFamily:"Medium", marginBottom: ".3vw", marginRight:"5vw" }}>{messageUser}</p>
-                        <Chip style={{fontFamily:"Medium", fontSize: "0.9rem", marginBottom: ".5vw", marginRight:"4.5vw"}} color={username === messageUser ? "#637dec" : "#444"} label={message} />
-                    </div>
+                        <Chip style={{ fontFamily: "Medium", fontSize: "0.9rem", marginBottom: ".5vw"}} color={username === messageUser ? "primary" : "secondary"} label={message} />
+                        </div>
                 )
             } )}
             </div>

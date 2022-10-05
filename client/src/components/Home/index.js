@@ -19,7 +19,7 @@ const Home = () =>
             <div className='page'>
                 <Navbar />
             <div className='container home-page' style={bg}>
-                <Swiper />
+                <Swiper/>
             </div>
 
                 <Loader type="ball-pulse-sync" />
