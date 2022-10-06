@@ -1,30 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import TinderCard from "react-tinder-card";
+import { ADD_FRIEND } from "../../utils/mutations";
+import {useQuery, useMutation} from "@apollo/client";
+import {QUERY_USERS } from "../../utils/queries";
+import { useParams } from "react-router-dom";
 
-
-const People = [
-	{
-		name: "Richard Hendricks",
-		image: "https://swiperjs.com/demos/images/nature-9.jpg",
-	},
-	{
-		name: "Erlich Bachman",
-		image: "https://swiperjs.com/demos/images/nature-8.jpg",
-	},
-	{
-		name: "Monica Hall",
-		image: "https://swiperjs.com/demos/images/nature-10.jpg",
-	},
-	{
-		name: "Jared Dunn",
-		image: "https://swiperjs.com/demos/images/nature-6.jpg",
-	},
-	{
-		name: "Dinesh Chugtai",
-		image: "https://swiperjs.com/demos/images/nature-7.jpg",
-	},
-];
 const CardDiv = styled.div`
 	display: flex;
 	justify-content: center;
@@ -41,13 +22,32 @@ const ImgDiv = styled.div`
 	background-size: cover;
 `;
 const Swiper = () => {
+	const { username: userParam } = useParams();
+
+	const { People }= useQuery(QUERY_USERS, {
+		variables: { username: userParam }});
+
+	const user = People.user;
+
+	
+	const [addFriend] = useMutation(ADD_FRIEND);
+	const swipeRight = async () => {
+		try {
+			await addFriend({
+				variables: { id: user._id },
+			});
+		} catch (e) {
+			console.error(e);
+		}
+	};
+
 	const onSwipe = (direction) => {
 		console.log("You swiped: " + direction);
 		if (direction === 'left'){
 			console.log("left")
 		}
 		else if (direction === 'right') {
-			console.log("right")
+			return swipeRight();
 		} else {
 			console.log("swipe left or right")
 		}
@@ -64,7 +64,7 @@ const Swiper = () => {
 						key={index}
 						className="swipe"
 						onSwipe={onSwipe}
-						onCardLeftScreen={() => onCardLeftScreen("fooBar")}
+						onCardLeftScreen={() => onCardLeftScreen("Match")}
 						preventSwipe={["up", "down"]}
 					>
 						<ImgDiv

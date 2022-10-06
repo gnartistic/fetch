@@ -30,7 +30,6 @@ mutation addFriend($id: ID!) {
     addFriend(friendId: $id) {
 	_id
     username
-    friendCount
     friends {
         _id
         username

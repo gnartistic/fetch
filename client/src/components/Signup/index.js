@@ -50,7 +50,7 @@ const Signup = () =>
         personalityTraits: ''
     } );
 
-    const [addUser] = useMutation(ADD_USER);
+    const [addUser, {error}] = useMutation(ADD_USER);
 
     // submit form
     const handleFormSubmit = async ( event ) =>
@@ -80,25 +80,6 @@ const Signup = () =>
             return <PetDetails formData={formData} setFormData={setFormData} />;
         }
     };
-
-    const [addUser, { error }] = useMutation(ADD_USER);
-
-	// submit form
-	const handleFormSubmit = async (event) => {
-		event.preventDefault();
-
-		// use try/catch instead of promises to handle errors
-		try {
-			// execute addUser mutation and pass in variable data from form
-			const { data } = await addUser({
-				variables: { ...formData },
-			});
-			Auth.login(data.addUser.token);
-		} catch (e) {
-			console.error(e);
-		}
-	};
-    
     // rendered page
     return (
         <>

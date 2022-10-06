@@ -4,18 +4,18 @@ const { gql } = require( 'apollo-server-express' );
 const typeDefs = gql`
 
 type User {
-    _id: ID!
-    username: String!
-    email: String!
-    token: String! 
+    _id: ID
+    username: String
+    email: String
+    token: String
     pets: [Pet]
-	friends: [Friends]
-    age: String!
-	gender: String!
-	showMe: String!
-	city: String!
-	state: String!
-	occupation: String!
+	friends: [User]
+    age: String
+	gender: String
+	showMe: String
+	city: String
+	state: String
+	occupation: String
 }
 
 input SignupInput {
@@ -32,6 +32,11 @@ input LoginInput {
 type Auth {
     token: ID!
     user: User
+}
+
+type Friends {
+    id: ID
+    username: String
 }
 
 type Pet {
