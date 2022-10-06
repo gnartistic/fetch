@@ -32,31 +32,33 @@ const Swiper = () => {
 
 	
 	const [addFriend] = useMutation(ADD_FRIEND);
-	const swipeRight = async () => {
+	const swipeRight = async (userId) => {
 		try {
 			await addFriend({
-				variables: { id: People._id },
+				variables: { id: userId },
 			});
+			console.log("added Friend");
 		} catch (e) {
 			console.error(e);
 		}
 	};
-
-	const onSwipe = (direction) => {
+	const onCardLeftScreen = (myIdentifier) => {
+		console.log(myIdentifier + 'Has left the screen');
+	};
+	const onSwipe = (direction, user) => {
 		console.log("You swiped: " + direction);
 		if (direction === 'left'){
-			console.log("left")
+			console.log(user);
 		}
 		else if (direction === 'right') {
-			console.log("yes");
+			swipeRight(user);
+			console.log(user);
+
 		} else {
 			console.log("swipe left or right")
 		}
 	};
-
-	const onCardLeftScreen = (myIdentifier) => {
-		console.log(myIdentifier + " left the screen");
-	};
+	
 	return (
 		<CardDiv>
 			
@@ -66,8 +68,8 @@ const Swiper = () => {
 								<TinderCard
 									key={index}
 									className="swipe"
-									onSwipe={onSwipe}
-									onCardLeftScreen={() => onCardLeftScreen("Match")}
+									onSwipe={(direction)=> onSwipe(direction, person._id)}
+									onCardLeftScreen={() => onCardLeftScreen(`${person._id}`)}
 									preventSwipe={["up", "down"]}
 								>
 									<ImgDiv
