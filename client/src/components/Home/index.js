@@ -16,7 +16,6 @@ const Home = () =>
     return (
         <>
             <div className='page'>
-                <Navbar />
             <div className='container home-page' style={bg}>
                 <Swiper/>
             </div>

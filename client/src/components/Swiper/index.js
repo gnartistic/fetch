@@ -5,6 +5,8 @@ import { ADD_FRIEND } from "../../utils/mutations";
 import {useQuery, useMutation} from "@apollo/client";
 import {QUERY_USERS } from "../../utils/queries";
 import { useParams } from "react-router-dom";
+import './index.scss';
+import Navbar from "../Navbar";
 
 const CardDiv = styled.div`
 	display: flex;
@@ -58,6 +60,8 @@ const Swiper = () => {
 		console.log(myIdentifier + " left the screen");
 	};
 	return (
+		<>
+			<Navbar/>
 		<CardDiv>
 			
 			{People.map((person, index) => {
@@ -70,11 +74,14 @@ const Swiper = () => {
 									onCardLeftScreen={() => onCardLeftScreen("Match")}
 									preventSwipe={["up", "down"]}
 								>
+										
 									<ImgDiv
 										style={{ backgroundImage: `url(./images/${person.pet[0].petPic})` }}
 										bg={person.pet[0].petName}
 									>
+										<div className="titleContainer">
 										<h1
+											className="cardTitle"
 											style={{
 												color: "black",
 												position: "absolute",
@@ -86,11 +93,13 @@ const Swiper = () => {
 										>
 											{person.pet[0].petName}
 										</h1>
+										</div>
 									</ImgDiv>
 								</TinderCard>
 							);
 						})}
-		</CardDiv>
+			</CardDiv>
+			</>
 	);
 };
 export default Swiper;
