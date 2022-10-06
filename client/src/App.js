@@ -17,7 +17,7 @@ const httpLink = new HttpLink( {
 } );
 
 const wsLink = new GraphQLWsLink( createClient( {
-  url: 'wss://ohfetch.herokuapp.com/subscriptions',
+  url: 'ws://ohfetch.herokuapp.com/subscriptions',
 } ) );
 
 const splitLink = split(
