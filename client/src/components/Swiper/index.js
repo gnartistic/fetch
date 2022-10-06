@@ -22,24 +22,25 @@ const ImgDiv = styled.div`
 	background-size: cover;
 `;
 const Swiper = () => {
+
 	const { username: userParam } = useParams();
 
-	const { People }= useQuery(QUERY_USERS, {
-		variables: { username: userParam }});
-
-	const user = People.user;
+	const { loading, data }= useQuery(QUERY_USERS);
+	const People = data?.users || [];
+	console.log(People);
+	
 
 	
-	const [addFriend] = useMutation(ADD_FRIEND);
-	const swipeRight = async () => {
-		try {
-			await addFriend({
-				variables: { id: user._id },
-			});
-		} catch (e) {
-			console.error(e);
-		}
-	};
+	// const [addFriend] = useMutation(ADD_FRIEND);
+	// const swipeRight = async () => {
+	// 	try {
+	// 		await addFriend({
+	// 			variables: { id: People._id },
+	// 		});
+	// 	} catch (e) {
+	// 		console.error(e);
+	// 	}
+	// };
 
 	const onSwipe = (direction) => {
 		console.log("You swiped: " + direction);
@@ -47,7 +48,7 @@ const Swiper = () => {
 			console.log("left")
 		}
 		else if (direction === 'right') {
-			return swipeRight();
+			console.log("yes");
 		} else {
 			console.log("swipe left or right")
 		}

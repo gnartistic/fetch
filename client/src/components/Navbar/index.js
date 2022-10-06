@@ -82,7 +82,7 @@ const Navbar = () => {
 						activeclassname="active"
 						className="logout"
 						to="/"
-						onclick={logout}
+						onClick={logout}
 					>
 						<FontAwesomeIcon
 							className="icon"

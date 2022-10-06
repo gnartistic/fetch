@@ -26,7 +26,7 @@ const httpServer = createServer(app);
 
 const wsServer = new WebSocketServer({
 	server: httpServer,
-	path: "/subscriptions",
+	path: "ws://localhost:3001/subscriptions",
 });
 
 const serverCleanup = useServer({ schema }, wsServer);
