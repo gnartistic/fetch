@@ -1,7 +1,6 @@
 import Loader from 'react-loaders';
 import Navbar from '../Navbar'
 import Swiper from '../Swiper';
-import Auth from '../../utils/auth';
 
 const bg = {
     width: '100%',
@@ -19,7 +18,7 @@ const Home = () =>
             <div className='page'>
                 <Navbar />
             <div className='container home-page' style={bg}>
-                <Swiper />
+                <Swiper/>
             </div>
 
                 <Loader type="ball-pulse-sync" />
