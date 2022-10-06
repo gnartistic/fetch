@@ -1,17 +1,17 @@
 const { Schema, model} = require("mongoose");
 
 const petSchema = new Schema({
-
+    username: {
+        type: String
+    },
     petName: {
         type: String,
         required: true,
     },
-    name: {
-        type: String, 
-        required: true
-    },
     petBio: {
         type: String,
+        minlength: 0,
+        maxlength: 100
     },
     petPic: {
         type: String

@@ -30,8 +30,6 @@ const age = ['18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '
 //  array for gender choices in gender dropdown menu
 const gender = ['Man', 'Woman', 'Trans Man', 'Trans Woman', 'Non-binary', 'Other'];
 
-// array for sexual preference dropdown menu
-const showMe = ['Men', 'Women', 'Everyone'];
 
 
 //component
@@ -90,20 +88,6 @@ const UserDetails = ({ formData, setFormData }) => {
             </li>
 
             <li className='half'>
-                <TextField
-                    label='First name'
-                    value={formData.firstName}
-                    onChange={(event) =>
-                        setFormData({ ...formData, firstName: event.target.value })
-                    }
-                    variant="outlined"
-                    fullWidth
-                    size='small'
-                    required
-                />
-            </li>
-
-            <li className='half'>
                 <label className='age'>Age</label>
                 <Select
                     value={formData.age}
@@ -149,71 +133,6 @@ const UserDetails = ({ formData, setFormData }) => {
                     ))}
                 </Select>
                 <FormHelperText>Choose the option that fits you best.</FormHelperText>
-            </li>
-
-            <li>
-                <TextField
-                    label='city'
-                    value={formData.city}
-                    onChange={(event) =>
-                        setFormData({ ...formData, city: event.target.value })
-                    }
-                    variant="outlined"
-                    fullWidth
-                    size='small'
-                    required
-                />
-            </li>
-
-            <li>
-                <TextField
-                    label='state'
-                    value={formData.state}
-                    onChange={(event) =>
-                        setFormData({ ...formData, state: event.target.value })
-                    }
-                    variant="outlined"
-                    fullWidth
-                    size='small'
-                    required
-                />
-            </li>
-            <li className='half'>
-                <TextField
-                    label='occupation'
-                    value={formData.occupation}
-                    onChange={(event) =>
-                        setFormData({ ...formData, occupation: event.target.value })
-                    }
-                    variant="outlined"
-                    fullWidth
-                    size='small'
-                    required
-                />
-            </li>
-
-            <li className='half'>
-                <label>Show me</label>
-                <Select
-                    value={formData.showMe}
-                    onChange={(event) =>
-                        setFormData({ ...formData, showMe: event.target.value })
-                    }
-                    variant="outlined"
-                    required
-                    style={font}
-                    MenuProps={MenuProps}>
-                    {showMe.map((showMe) => (
-                        <MenuItem
-                            key={showMe}
-                            value={showMe}
-                            style={font}
-                        >
-                            {showMe}
-                        </MenuItem>
-                    ))}
-                </Select>
-                <FormHelperText>Only you can see this.</FormHelperText>
             </li>
             
         </ul>

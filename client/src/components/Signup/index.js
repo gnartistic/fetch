@@ -109,7 +109,7 @@ const Signup = () =>
                         </div>
                         <div className='nextButton'>
                             <Button
-                                type='submit'
+                                type={page === formTitles.length - 1 ? "submit" : "next"}
                                 onClick={() =>
                                 {
                                     // using the page's state as comparison with the title's index in array again
