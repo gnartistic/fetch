@@ -8,13 +8,13 @@ import { Chat } from './components/Chat/';
 import Friends from './components/Friends';
 import Profile from './components/Profile';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloProvider, split, HttpLink, ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloProvider, split, createHttpLink, ApolloClient, InMemoryCache } from '@apollo/client';
 import { getMainDefinition } from '@apollo/client/utilities';
 import { GraphQLWsLink } from '@apollo/client/link/subscriptions';
 import { createClient } from 'graphql-ws';
 
-const httpLink = new HttpLink( {
-  uri: 'https://localhost:3001/graphql'
+const httpLink = new createHttpLink( {
+  uri: "http://localhost:3001/graphql",
 } );
 
 const wsLink = new GraphQLWsLink( createClient( {
