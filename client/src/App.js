@@ -13,11 +13,11 @@ import { GraphQLWsLink } from '@apollo/client/link/subscriptions';
 import { createClient } from 'graphql-ws';
 
 const httpLink = new HttpLink( {
-  uri: 'http://localhost:3001/graphql'
+  uri: '/graphql'
 } );
 
 const wsLink = new GraphQLWsLink( createClient( {
-  url: 'ws://localhost:3001/subscriptions',
+  url: 'wss://ohfetch.herokuapp/subscriptions',
 } ) );
 
 const splitLink = split(
