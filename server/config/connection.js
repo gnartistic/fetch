@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/fetch',
+    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/ohfetch',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
