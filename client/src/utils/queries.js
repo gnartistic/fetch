@@ -60,7 +60,6 @@ export const QUERY_ME = gql`
 			_id
 			username
 			email
-			matchCount
 			pets {
 				petName
 				petAge
@@ -69,7 +68,7 @@ export const QUERY_ME = gql`
 				petGender
 				favActivity
 			}
-			matches {
+			friends {
 				_id
 				username
 			}
