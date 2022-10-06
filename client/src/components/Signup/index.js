@@ -50,7 +50,7 @@ const Signup = () =>
         personalityTraits: ''
     } );
 
-    const [addUser] = useMutation(ADD_USER);
+    const [addUser, {error}] = useMutation(ADD_USER);
 
     // submit form
     const handleFormSubmit = async ( event ) =>
@@ -80,8 +80,6 @@ const Signup = () =>
             return <PetDetails formData={formData} setFormData={setFormData} />;
         }
     };
-
-    const [addUser, { error }] = useMutation(ADD_USER);
     // rendered page
     return (
         <>

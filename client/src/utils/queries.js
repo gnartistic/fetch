@@ -1,14 +1,39 @@
 import { gql } from "@apollo/client";
 
+export const QUERY_USERS = gql`
+	query users {
+		users {
+			_id
+			username
+			email
+			pets {
+				_id
+				petName
+				petBio
+				petPic
+				petAge
+				personalityTraits
+				breed
+				petGender
+				favActivity
+			}
+			city
+			state
+			gender
+		}
+	}
+`;
+
 export const QUERY_USER = gql`
 	query user($username: String!) {
 		user(username: $username) {
 			_id
 			username
 			email
-			matchCount
-			pets{
+			pets {
 				petName
+				petBio
+				petPic
 				petAge
 				personalityTraits
 				breed
@@ -25,7 +50,6 @@ export const QUERY_USER = gql`
 			city
 			state
 			occupation
-			
 		}
 	}
 `;
@@ -37,7 +61,7 @@ export const QUERY_ME = gql`
 			username
 			email
 			matchCount
-			pets{
+			pets {
 				petName
 				petAge
 				personalityTraits
@@ -75,11 +99,11 @@ export const QUERY_ME_BASIC = gql`
 `;
 
 export const GET_MESSAGES = gql`
-    subscription {
-        messages {
-        id
-        username
-        message
-        }
-    }
+	subscription {
+		messages {
+			id
+			username
+			message
+		}
+	}
 `;

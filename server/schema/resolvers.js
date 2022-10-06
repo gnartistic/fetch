@@ -16,7 +16,7 @@ const resolvers = {
     Query: {
         users: async ( parent, args ) =>
         {
-            return await User.find( {} ).populate( 'pets' )
+            return await User.find( {} ).populate( 'pets' ).populate("friends")
         },
 
         user: async ( parent, args ) =>

@@ -3,37 +3,97 @@
         "username": "CharlieIsCool",
         "email": "charliehouston912@gmail.com",
         "password": "1234pa$$",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "You're gonna love me",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Katlyn85",
         "email": "Katlyn8550@gmail.com",
         "password": "otK5YtXpcalD1cm",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Teddy",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Lessie_Kautzer61",
         "email": "Lessie_Kautzer61_Walker81@hotmail.com",
         "password": "AP3EUTRZoxzsiHn",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Elton_Heaney",
         "email": "Elton_Heaney.Kemmer6@yahoo.com",
         "password": "3dVgRgSQmrGLaQE",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Josue67",
         "email": "Josue6785@yahoo.com",
         "password": "BNsmR75BHDH4na3",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Jaron98",
         "email": "Jaron98_Will72@hotmail.com",
         "password": "vNVT_y10PBpVaUV",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Colt.Windler",
@@ -44,25 +104,65 @@
         "username": "Berta.Schmeler15",
         "email": "Berta.Schmeler15_Hackett93@hotmail.com",
         "password": "_cbdQwR8Vjn4wBk",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Kaley35",
         "email": "Kaley35_Carroll@yahoo.com",
         "password": "OodrBk3d1t5Ddhb",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Bryana.Hackett",
         "email": "Bryana.Hackett94@yahoo.com",
         "password": "WZ3brF0TKThmwU8",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Madge.Feil",
         "email": "Madge.Feil_Fadel@yahoo.com",
         "password": "oKEuEU4FnlO4Efs",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Alta.Kemmer20",
@@ -73,19 +173,49 @@
         "username": "Vladimir_Block",
         "email": "Vladimir_Block_Feil41@hotmail.com",
         "password": "q9AgUcyAQPmK5jJ",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Mona_Hilll",
         "email": "Mona_Hilll_Zemlak@hotmail.com",
         "password": "GkOySb7J56E0Hpz",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Alice_Simonis",
         "email": "Alice_Simonis8@gmail.com",
         "password": "ElVXqVGn9Tm_L38",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Ayana.Bogisich",
@@ -101,31 +231,81 @@
         "username": "Tyree17",
         "email": "Tyree17_Tillman@yahoo.com",
         "password": "TLhhBXjOVGKWP43",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Eldridge42",
         "email": "Eldridge4262@yahoo.com",
         "password": "dcWBuw3ugFODuNy",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Natasha_Beier59",
         "email": "Natasha_Beier5944@hotmail.com",
         "password": "F5ikR9RByGAc0NQ",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Kory_Roob",
         "email": "Kory_Roob.Kuhic9@yahoo.com",
         "password": "tJzeZZghPa_trcS",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Gianni_Kiehn14",
         "email": "Gianni_Kiehn14_Weissnat@gmail.com",
         "password": "QWkEC6Ymn4AuZez",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Tomas93",
@@ -136,139 +316,369 @@
         "username": "Damion87",
         "email": "Damion87.Wuckert@yahoo.com",
         "password": "7tcyz7bT2N_iJCw",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Chanel_Windler",
         "email": "Chanel_Windler.Zemlak@gmail.com",
         "password": "zCIDszgLNEfQmfw",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Jody.Eichmann",
         "email": "Jody.Eichmann_Roberts19@hotmail.com",
         "password": "CG0IfJRxeSZSWyp",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Delbert.Cruickshank5",
         "email": "Delbert.Cruickshank5.Bradtke@gmail.com",
         "password": "7iP1wJfqcEe_pzC",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Reggie_Lang",
         "email": "Reggie_Lang_Dicki@gmail.com",
         "password": "1o6Y0JCF14gUa8k",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Meagan_Cummings36",
         "email": "Meagan_Cummings36_Kautzer@gmail.com",
         "password": "8O9Bf9KVfab3ESE",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Shanelle_Hermann38",
         "email": "Shanelle_Hermann38_OConner@hotmail.com",
         "password": "YttiqyjJmLDT8sB",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Mervin2",
         "email": "Mervin2_Wiegand@gmail.com",
         "password": "GeMHQHT_5EsQ0M5",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Joshuah.Morissette",
         "email": "Joshuah.Morissette.Kassulke@hotmail.com",
         "password": "BQEFz1GYs7m3jIq",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Jacinto_Farrell",
         "email": "Jacinto_Farrell88@yahoo.com",
         "password": "xaCR1hMqTRzepT4",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Dee_Bogisich",
         "email": "Dee_Bogisich.Homenick23@gmail.com",
         "password": "EmXl6mHAsnypmWd",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Taylor.Wolff",
         "email": "Taylor.Wolff_Kris@hotmail.com",
         "password": "pdYZXfGozzu3M4B",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Fern.Schiller",
         "email": "Fern.Schiller_Connelly48@yahoo.com",
         "password": "M9FrWjVKZzeVqSo",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Ora46",
         "email": "Ora463@gmail.com",
         "password": "hoNJMqtQaKwIaeI",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Freida_Yost93",
         "email": "Freida_Yost9389@hotmail.com",
         "password": "ojuHAc6AYmAsdWg",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Kiel_Ullrich",
         "email": "Kiel_Ullrich16@yahoo.com",
         "password": "34s9h7zFmWtHOZc",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Rosario.Howe",
         "email": "Rosario.Howe66@yahoo.com",
         "password": "YH8ri1dPVvs8ox5",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Dwight.Reilly",
         "email": "Dwight.Reilly.Krajcik52@gmail.com",
         "password": "9DJc9huo_AJBiMp",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Rashawn93",
         "email": "Rashawn9326@gmail.com",
         "password": "bTeZpJjVeCP2FLo",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Gia56",
         "email": "Gia56_Bahringer@yahoo.com",
         "password": "8Kkn76al7w7AMPC",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Damien_Ullrich",
         "email": "Damien_Ullrich_Turcotte5@gmail.com",
         "password": "SbRXNv9OfyhLfQa",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Osbaldo.Jerde",
         "email": "Osbaldo.Jerde13@yahoo.com",
         "password": "lxmC3cI7FDk4j5W",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Sammy.Kassulke74",
         "email": "Sammy.Kassulke74.Gottlieb56@hotmail.com",
         "password": "AQRM7ut47r8DcRx",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Shyann.Crist57",
@@ -279,18 +689,48 @@
         "username": "Anjali5",
         "email": "Anjali5.Bergnaum@yahoo.com",
         "password": "lPyRtzle1LjkjIe",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Daija.Rempel",
         "email": "Daija.Rempel_Schuster@yahoo.com",
         "password": "x5KHTb5d1x4DUtu",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     },
     {
         "username": "Donny21",
         "email": "Donny2191@yahoo.com",
         "password": "gKbsfF3M9jeBRcH",
-        "friends": []
+        "friends": [],
+        "pets":{
+            "petName": "Rose",
+            "petBio": "",
+			"petPic": "",
+			"petAge": "",
+			"personalityTraits": "",
+			"breed": "",
+			"petGender": "",
+			"favActivity": ""
+        }
     }
 ]
