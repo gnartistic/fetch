@@ -14,7 +14,7 @@ const { WebSocketServer } = require("ws");
 const { useServer } = require("graphql-ws/lib/use/ws");
 
 const pubsub = new PubSub();
-
+const path = require('path');
 const schema = makeExecutableSchema({ typeDefs, resolvers });
 const PORT = process.env.PORT || 3001;
 
