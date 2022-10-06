@@ -16,7 +16,7 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Rose",
                 petBio: "You're gonna love me",
                 petPic: "ivana-la-61jg6zviI7I-unsplash.jpg",
@@ -35,10 +35,10 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Tom",
                 petBio: "I am floof",
-                petPic: "alvan-nee-egnAFVYS_h0-unsplash.jpg",
+                petPic: "michael-g-lDCkfCoiF9c-unsplash.jpg",
                 petAge: "6",
                 personalityTraits: "Outgoing",
                 breed: "Corgi",
@@ -54,7 +54,7 @@ db.once( 'open', async () =>
             age:"24",
             gender: "Woman",
             friends: [],
-            pets:[{
+            pet:[{
                 petName: "Andre",
                 username: "Lessie_Kautzer61",
                 petBio: "Beach days are best days",
@@ -73,7 +73,7 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Pebble",
                 username: "Elton_Heaney",
                 petBio: "Are you also amazing? I suppose we could be friends",
@@ -92,11 +92,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Henley",
                 username: "Josue67",
                 petBio: "I'm gonna need a minute to brush my hair.",
-                petPic: "herbert-goetsch-Wpixq0Z1dfo-unsplash",
+                petPic: "herbert-goetsch-Wpixq0Z1dfo-unsplash.jpg",
                 petAge: "5",
                 personalityTraits: "Outgoing",
                 breed: "Long Hair Chi",
@@ -111,11 +111,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Howie",
                 username: "Jaron98",
                 petBio: "I am just want friends",
-                petPic: "howie-r-CjI_2QX7hvU-unsplash",
+                petPic: "howie-r-CjI_2QX7hvU-unsplash.jpg",
                 petAge: "6",
                 personalityTraits: "Outgoing",
                 breed: "Collie Mix",
@@ -130,11 +130,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[ {
+            pet:[ {
                 petName: "Jazzy",
                 username: "Berta.Schmeler15",
                 petBio: "Outdoors are the best!!!",
-                petPic: "josephine-menge-h7VBJRBcieM-unsplash",
+                petPic: "josephine-menge-h7VBJRBcieM-unsplash.jpg",
                 petAge: "3",
                 personalityTraits: "Outgoing",
                 breed: "Aussie",
@@ -149,11 +149,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Mimi",
                 username: "Kaley35",
                 petBio: "I just want my snuggie, mate.",
-                petPic: "karsten-winegeart-Qb7D1xw28Co-unsplash",
+                petPic: "karsten-winegeart-Qb7D1xw28Co-unsplash.jpg",
                 petAge: "9",
                 personalityTraits: "Outgoing",
                 breed: "Mini poodle",
@@ -168,11 +168,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "French Fry",
                 username: "Bryana.Hackett",
                 petBio: "i like slow walks where I can see cool stuff",
-                petPic: "karsten-winegeart-T7Hxkhv23yY-unsplash",
+                petPic: "karsten-winegeart-T7Hxkhv23yY-unsplash.jpg",
                 petAge: "3",
                 personalityTraits: "Outgoing",
                 breed: "Frenchie",
@@ -187,11 +187,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Apollo",
                 username: "Madge.Feil",
                 petBio: "I freaking love the snow and the park. Lets do this!",
-                petPic: "kieran-white-NKN25UfGfkQ-unsplash (1)",
+                petPic: "kieran-white-NKN25UfGfkQ-unsplash.jpg",
                 petAge: "4",
                 personalityTraits: "Outgoing",
                 breed: "Malamute",
@@ -206,11 +206,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Samson",
                 username: "Vladimir_Block",
                 petBio: "I do the cutest but wiggles and I find friends in everyone",
-                petPic: "michael-g-2dMIlY1rHT4-unsplash",
+                petPic: "michael-g-2dMIlY1rHT4-unsplash.jpg",
                 petAge: "6",
                 personalityTraits: "Outgoing",
                 breed: "Staffie",
@@ -225,11 +225,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Dollie",
                 username: "Mona_Hilll",
                 petBio: "I'm a bit nervous around new dogs, but I really want to play.",
-                petPic: "michael-g-lDCkfCoiF9c-unsplash",
+                petPic: "michael-g-lDCkfCoiF9c-unsplash.jpg",
                 petAge: "1",
                 personalityTraits: "Outgoing",
                 breed: "Staffie",
@@ -244,11 +244,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Romeo",
                 username: "Alice_Simonis",
                 petBio: "I get a little excited and lick everyone.",
-                petPic: "michael-g-OUFMDLeuTnI-unsplash",
+                petPic: "michael-g-OUFMDLeuTnI-unsplash.jpg",
                 petAge: "3",
                 personalityTraits: "Outgoing",
                 breed: "Bully",
@@ -263,11 +263,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Kesha",
                 username: "Tyree17",
                 petBio: "I really love dock jumping!",
-                petPic: "minnie-zhou-E_YBgxDRVbM-unsplash",
+                petPic: "minnie-zhou-E_YBgxDRVbM-unsplash.jpg",
                 petAge: "6",
                 personalityTraits: "Outgoing",
                 breed: "Border Collie",
@@ -282,11 +282,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Momo",
                 username: "Eldridge42",
                 petBio: "OH EM GEEE!!! Are we gonna go to the groomer together???",
-                petPic: "mohamad-alnaimi-lHJ9K-tZ3cM-unsplash",
+                petPic: "mohamad-alnaimi-lHJ9K-tZ3cM-unsplash.jpg",
                 petAge: "2",
                 personalityTraits: "Outgoing",
                 breed: "Pomeranian",
@@ -301,11 +301,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Milo",
                 username: "Natasha_Beier59",
                 petBio: "Best days are Sundays.",
-                petPic: "mollie-sivaram-P2igqqmbiKE-unsplash",
+                petPic: "mollie-sivaram-P2igqqmbiKE-unsplash.jpg",
                 petAge: "3",
                 personalityTraits: "Outgoing",
                 breed: "Dachshund",
@@ -320,11 +320,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Percy",
                 username: "Kory_Roob",
                 petBio: "I just really like meeting new dogs and wrestling",
-                petPic: "peri-stojnic-5Vr_RVPfbMI-unsplash",
+                petPic: "peri-stojnic-5Vr_RVPfbMI-unsplash.jpg",
                 petAge: "3",
                 personalityTraits: "Outgoing",
                 breed: "Samoyed",
@@ -339,11 +339,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Pirate",
                 username: "Gianni_Kiehn14",
                 petBio: "Toys are just the coolest thing ever",
-                petPic: "rafael-forseck-qVfSbJjtocI-unsplash",
+                petPic: "rafael-forseck-qVfSbJjtocI-unsplash.jpg",
                 petAge: "3",
                 personalityTraits: "Outgoing",
                 breed: "Dalmatian",
@@ -358,11 +358,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Bex",
                 username: "Damion87",
                 petBio: "There is nothing better than rolling in the grass!",
-                petPic: "ralu-gal-G8cB8hY3yvU-unsplash",
+                petPic: "ralu-gal-G8cB8hY3yvU-unsplash.jpg",
                 petAge: "6",
                 personalityTraits: "Outgoing",
                 breed: "Dachshund",
@@ -377,11 +377,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Ross",
                 username: "Chanel_Windler",
                 petBio: "I'm a good boy. I love playing with new friends.",
-                petPic: "richard-brutyo-Sg3XwuEpybU-unsplash",
+                petPic: "richard-brutyo-Sg3XwuEpybU-unsplash.jpg",
                 petAge: "3",
                 personalityTraits: "Outgoing",
                 breed: "Golden Retriever",
@@ -396,7 +396,7 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Suki",
                 username: "Jody.Eichmann",
                 petBio: "I prefer going on long hikes.",
@@ -415,11 +415,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Sabora",
                 username: "Delbert.Cruickshank5",
                 petBio: "Running with my person brings me joy.",
-                petPic: "tahoe-VZukgvBgSPg-unsplash",
+                petPic: "tahoe-VZukgvBgSPg-unsplash.jpg",
                 petAge: "6",
                 personalityTraits: "Outgoing",
                 breed: "Corgi",
@@ -434,11 +434,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Man",
-            pets:[{
+            pet:[{
                 petName: "Flax",
                 username: "Reggie_Lang",
                 petBio: "I really want to make new friends!",
-                petPic: "taylor-kopel-WX4i1Jq_o0Y-unsplash",
+                petPic: "taylor-kopel-WX4i1Jq_o0Y-unsplash.jpg",
                 petAge: '<1',
                 personalityTraits: "Outgoing",
                 breed: "Yellow lab",
@@ -453,11 +453,11 @@ db.once( 'open', async () =>
             friends: [],
             age:"24",
             gender: "Woman",
-            pets:[{
+            pet:[{
                 petName: "Fury",
                 username: "Meagan_Cummings36",
                 petBio: "Ball herding is my thing! Wanna race?",
-                petPic: "yoav-hornung-ulGabVbgA6s-unsplash",
+                petPic: "yoav-hornung-ulGabVbgA6s-unsplash.jpg",
                 petAge: '4',
                 personalityTraits: "Outgoing",
                 breed: "Border Collie",

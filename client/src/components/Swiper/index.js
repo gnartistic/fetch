@@ -61,6 +61,7 @@ const Swiper = () => {
 		<CardDiv>
 			
 			{People.map((person, index) => {
+				console.log(person.pet[0].petName);
 							return (
 								<TinderCard
 									key={index}
@@ -70,12 +71,12 @@ const Swiper = () => {
 									preventSwipe={["up", "down"]}
 								>
 									<ImgDiv
-										style={{ backgroundImage: `url(${person.image})` }}
-										bg={person.image}
+										style={{ backgroundImage: `url(./images/${person.pet[0].petPic})` }}
+										bg={person.pet[0].petName}
 									>
 										<h1
 											style={{
-												color: "white",
+												color: "black",
 												position: "absolute",
 												bottom: "0px",
 												left: "5px",
@@ -83,7 +84,7 @@ const Swiper = () => {
 												fontWeight: "bold",
 											}}
 										>
-											{person.name}
+											{person.pet[0].petName}
 										</h1>
 									</ImgDiv>
 								</TinderCard>

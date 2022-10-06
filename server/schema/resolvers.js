@@ -16,14 +16,14 @@ const resolvers = {
     Query: {
         users: async ( parent, args ) =>
         {
-            return await User.find( {} ).populate( 'pets' ).populate("friends")
+            return await User.find( {} ).populate( 'pet' ).populate("friends")
         },
 
         user: async ( parent, args ) =>
         {
             const userData = await User.findOne( {} )
                 .select( '__v-password' )
-                .populate( 'pets' )
+                .populate( 'pet' )
                 .populate("friends");
 
             return userData
@@ -65,7 +65,7 @@ const resolvers = {
                     { $addToSet: { friends: friendId } },
                     { new: true }
                 ).populate( 'friends' );
-                console.log(context);
+                
                 return updatedUser;
             }
         },
