@@ -48,10 +48,11 @@ const Swiper = () => {
 	const onSwipe = (direction, user) => {
 		console.log("You swiped: " + direction);
 		if (direction === 'left'){
+			user.push(People);
 			console.log(user);
 		}
 		else if (direction === 'right') {
-			swipeRight(user);
+			swipeRight(user._id);
 			console.log(user);
 
 		} else {
@@ -68,7 +69,7 @@ const Swiper = () => {
 								<TinderCard
 									key={index}
 									className="swipe"
-									onSwipe={(direction)=> onSwipe(direction, person._id)}
+									onSwipe={(direction)=> onSwipe(direction, person)}
 									onCardLeftScreen={() => onCardLeftScreen(`${person._id}`)}
 									preventSwipe={["up", "down"]}
 								>
