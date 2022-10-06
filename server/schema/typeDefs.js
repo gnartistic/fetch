@@ -4,11 +4,14 @@ const { gql } = require( 'apollo-server-express' );
 const typeDefs = gql`
 
 type User {
-    _id: ID!
-    username: String!
-    email: String!
-    friends: [User]
-
+    _id: ID
+    username: String
+    email: String
+    token: String
+    pet: [Pet]
+	friends: [User]
+    age: String!
+	gender: String!
 }
 
 input SignupInput {
@@ -27,11 +30,19 @@ type Auth {
     user: User
 }
 
+type Friends {
+    id: ID
+    username: String
+}
+
 type Pet {
     _id: ID
-    name: String
+    petName: String
     breed: String
-    gender: String
+    petGender: String
+    petPic: String
+    petBio: String
+    username: String
 }
 
 type Message {
@@ -41,9 +52,10 @@ type Message {
 }
 
 type Query {
+    me: User
+    users: [User]
     user(id: ID!):User
-    users: [User!]
-    pets: [Pet]
+    pet: [Pet]
     messages: [Message!]
 }
 
@@ -59,4 +71,4 @@ type Subscription {
 }
 `
 
-module.exports = typeDefs; 
+module.exports = typeDefs;

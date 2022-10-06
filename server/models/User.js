@@ -21,15 +21,7 @@ const userSchema = new Schema(
 			required: true,
 			minlength: 5,
 		},
-		pets: [
-			petSchema
-		],
-		matches: [
-			{
-				type: Schema.Types.ObjectId,
-				ref: "User",
-			},
-		],
+		pet: [petSchema],
         age: {
             type: String,
             enum: [ '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65' ],
@@ -37,15 +29,7 @@ const userSchema = new Schema(
         gender: {
             type: String,
             enum: [ 'Man', 'Woman', 'Trans Man', 'Trans Woman', 'Non-binary', 'Other' ],
-
 		},
-        showMe: {
-            type: String,
-        },
-        city: String,
-        state: String,
-        occupation: String,
-        matchCount: Number,
 		createdAt: Date,
 		updatedAt: Date,
 		friends: [

@@ -80,19 +80,20 @@ const Signup = () =>
             return <PetDetails formData={formData} setFormData={setFormData} />;
         }
     };
-
+    
     // rendered page
     return (
         <>
             <div className='signup-page container' style={bg}>
                 <div className='form-zone'>
-                    <form className='signup-form' onSubmit={handleFormSubmit}>
+                    <form className='signup-form'
+                    onClick={handleFormSubmit}>
                         {/* I'm using the page's current state as the title's index in array */}
                         <h1>{formTitles[ page ]}</h1>
                         {/* page's conditional statement */}
                         <div>{pageDisplay()}</div>
                         <div className='prevButton'>
-                            <Button
+                            <button
                                 onClick={() =>
                                 {
                                     if( page == 0 ) {
@@ -103,12 +104,12 @@ const Signup = () =>
                                 }
                                 }
                             >
-                                {page === formTitles.length - 1 ? "back" : "Back to login"}
-                            </Button>
+                                {page === formTitles.length - 1 ? "back" : "Login"}
+                            </button>
                         </div>
                         <div className='nextButton'>
-                            <Button
-                                type='submit'
+                            <button
+                                type={page === formTitles.length - 1 ? "submit" : "next"}
                                 onClick={() =>
                                 {
                                     // using the page's state as comparison with the title's index in array again
@@ -122,7 +123,7 @@ const Signup = () =>
                                 }}
                             >
                                 {page === formTitles.length - 1 ? "Submit" : "Next"}
-                            </Button>
+                            </button>
                         </div>
                     </form>
                 </div>

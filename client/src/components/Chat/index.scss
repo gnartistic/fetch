@@ -4,16 +4,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .messageList {
+        padding:0 20vw 5vw 20vw;
+        height: 90vh;
+    overflow: scroll;
+    }
 
     h3{
         color: #444;
         padding: 1rem;
         text-align: center;
     }
+    
     .messageContainer{
     position: absolute;
+    align-self: center;
     bottom: 1vh;
-    width: 100vw;
+    width: 75vw;
 
     .messageInputZone {
         display: flex;
@@ -43,6 +50,3 @@
     }
 }
 
-.messageList {
-
-}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.scss";
 import Ball from "../../assets/images/invertedBall.png";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Loader from "react-loaders";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
@@ -46,6 +46,9 @@ const Login = ( props ) =>
 			console.error( e );
 		}
 
+		if( !error ) {
+			<Navigate to='/home'/>
+		}
 		// clear form values
 		setFormState( {
 			email: '',
@@ -91,7 +94,8 @@ const Login = ( props ) =>
 
 						<button className="signIn" type="submit">Sign in
 						</button>
-						{/* link to signup component */}
+					</form>
+					{/* link to signup component */}
 						<button className="createAccount">
 							<Link to="/Signup">Create Account</Link>
 						</button>
@@ -99,9 +103,8 @@ const Login = ( props ) =>
 						<p>
 							By tapping "Create Account" or "Sign in", you agree to our Terms
 							of Service.
-						</p>
-					</form>
-					{error && <div>Login failed</div>}
+					</p>
+					
 				</div>
 			</div>
 			{/* the loader inbetween screens */}

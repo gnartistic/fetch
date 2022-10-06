@@ -1,27 +1,35 @@
-import React from "react";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import './index.scss';
+import { useQuery, useMutation } from '@apollo/client';
+import { QUERY_USER, QUERY_ME } from '../../utils/queries';
+import { ADD_FRIEND } from '../../utils/mutations';
+// import Auth from '../../utils/auth';
 import { Button } from '@material-ui/core';
-// import { Link } from "react-router-dom";
-import './index.scss'
+import Navbar from '../Navbar';
+import Loader from 'react-loaders';
 
-const FriendList = ({ friendCount, username, friends }) => {
-    // if (!friends || !friends.length) {
-    //     return (
-    //         <p className="makeSumFriends">{username}, make some friends!</p>
-    //     );
-    // }
-
+const FriendsList = ( { username, friends } ) =>
+{
+    if( !friends || !friends.length ) {
+        return <p style={{fontFamily:'Medium', fontSize:'4vh'}}>{username}Make some friends!</p>;
+    }
     return (
         <>
-            {/* {friends.map((friend) => ( */}
-            {/* key={friend._id} ***goes in the button element opening tag */}
-            <h2>Friend's Name
-                <Button>
-                {/* <Link to={/profile/${friend.username}}> {friend.username}</Link> */}
-                Friend's Profile
-                </Button>
-            {/* ))} */}</h2>
+            <div className='friend-info'>
+                <div className='title-container'>
+                    <h2>{friends.username}</h2>
+                </div>
+                <div>
+                    {friends?.map( friend => (
+                        <button className="btn w-100 display-block mb-2" key={friends._id}>
+                            <Link to={`/profile/${ friend.username }`}>Profile</Link>
+                        </button>
+                    ) )}
+                </div>
+            </div>
         </>
     );
 };
 
-export default FriendList;
+export default FriendsList;

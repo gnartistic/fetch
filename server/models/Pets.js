@@ -1,15 +1,21 @@
 const { Schema, model} = require("mongoose");
 
 const petSchema = new Schema({
-
+    username: {
+        type: String
+    },
     petName: {
         type: String,
         required: true,
     },
-    name: {
-        type: String, 
-        required: true
-    }, 
+    petBio: {
+        type: String,
+        minlength: 0,
+        maxlength: 100
+    },
+    petPic: {
+        type: String
+    },
     petAge: {
         type: String,
         enum: [ '<1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20' ],
