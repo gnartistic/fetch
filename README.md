@@ -5,7 +5,7 @@
 * [Installation](#installation)
 * [Usage](#usage)
 * [Links](#links)
-* [Contact Me](#links)
+* [Conntribution](#contribution)
 
 ## Description 
 This is the challenge for week 20 of the bootcamp. For this assingment, we had to create a SPA Portfolio Page using React.js . This application showcases myself, as well as some of my work done in the past. Deployed website linked below! 
