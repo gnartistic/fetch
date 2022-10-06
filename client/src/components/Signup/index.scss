@@ -67,7 +67,7 @@ $gradient: linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%);
     .nextButton {
         button{
         position: absolute;
-        left: 82%;
+        left: 70%;
         bottom: 5%;
             padding: 1rem;
             width: 10rem;
@@ -78,6 +78,7 @@ $gradient: linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%);
             font-family: 'Medium';
             color: #fefefe;
             text-decoration: none;
+            font-size: 1vh;
 
             a {
                 font-family: 'Medium';
@@ -90,7 +91,7 @@ $gradient: linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%);
     .prevButton {
             button {
             position: absolute;
-            left: 5%;
+            left: 22%;
             bottom: 5%;
             padding: 1rem;
             width: 10rem;
@@ -102,7 +103,7 @@ $gradient: linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%);
             font-family: 'Medium';
             color: #fefefe;
             text-decoration: none;
-
+            font-size: 1vh;
             a {
                 font-family: 'Medium';
                 color: #fefefe;
@@ -190,7 +191,7 @@ $gradient: linear-gradient(90deg, #637dec 0%,#7068ce 40%, #7e55af 100%);
         .prevButton {
             button {
             position: absolute;
-            left: 5%;
+            left: 8%;
             bottom: 2%;
             width: 5rem;
             margin-top: 1rem;
