@@ -8,7 +8,7 @@ type User {
     username: String
     email: String
     token: String
-    pets: [Pet]
+    pet: [Pet]
 	friends: [User]
     age: String!
 	gender: String!
@@ -40,6 +40,9 @@ type Pet {
     petName: String
     breed: String
     petGender: String
+    petPic: String
+    petBio: String
+    username: String
 }
 
 type Message {
@@ -52,7 +55,7 @@ type Query {
     me: User
     users: [User]
     user(id: ID!):User
-    pets: [Pet]
+    pet: [Pet]
     messages: [Message!]
 }
 

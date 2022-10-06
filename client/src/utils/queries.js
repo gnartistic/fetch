@@ -4,11 +4,15 @@ export const QUERY_USERS = gql`
 	query Query {
 		users {
 			_id
-			email
 			username
-			pets {
-				petName
+			email
+			pet {
 				_id
+				petName
+				breed
+				petGender
+				petPic
+				petBio
 			}
 		}
 	}
@@ -20,7 +24,7 @@ export const QUERY_USER = gql`
 			_id
 			username
 			email
-			pets {
+			pet {
 				petName
 				petBio
 				petPic
@@ -46,7 +50,7 @@ export const QUERY_ME = gql`
 			_id
 			username
 			email
-			pets {
+			pet {
 				petName
 				petBio
 				petPic
