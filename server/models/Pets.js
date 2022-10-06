@@ -14,8 +14,7 @@ const petSchema = new Schema({
         type: String,
     },
     petPic: {
-        type: String,
-        required: true
+        type: String
     },
     petAge: {
         type: String,

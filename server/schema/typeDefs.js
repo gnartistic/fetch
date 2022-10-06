@@ -17,6 +17,11 @@ type User {
 	state: String!
 	occupation: String!
 }
+type UploadedFileResponse {
+    filename: String!
+    mimetype: String!
+    encoding: String!
+    url: String!
 
 input SignupInput {
     username: String

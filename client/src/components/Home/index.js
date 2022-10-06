@@ -1,7 +1,6 @@
 import Loader from 'react-loaders';
 import Navbar from '../Navbar'
 import Swiper from '../Swiper';
-import Auth from '../../utils/auth';
 
 const bg = {
     width: '100%',
