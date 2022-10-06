@@ -50,7 +50,7 @@ const Signup = () =>
         personalityTraits: ''
     } );
 
-    const [addUser, {error}] = useMutation(ADD_USER);
+    const [addUser] = useMutation(ADD_USER);
 
     // submit form
     const handleFormSubmit = async ( event ) =>
@@ -93,7 +93,7 @@ const Signup = () =>
                         {/* page's conditional statement */}
                         <div>{pageDisplay()}</div>
                         <div className='prevButton'>
-                            <Button
+                            <button
                                 onClick={() =>
                                 {
                                     if( page == 0 ) {
@@ -104,11 +104,11 @@ const Signup = () =>
                                 }
                                 }
                             >
-                                {page === formTitles.length - 1 ? "back" : "Back to login"}
-                            </Button>
+                                {page === formTitles.length - 1 ? "back" : "Login"}
+                            </button>
                         </div>
                         <div className='nextButton'>
-                            <Button
+                            <button
                                 type={page === formTitles.length - 1 ? "submit" : "next"}
                                 onClick={() =>
                                 {
@@ -123,7 +123,7 @@ const Signup = () =>
                                 }}
                             >
                                 {page === formTitles.length - 1 ? "Submit" : "Next"}
-                            </Button>
+                            </button>
                         </div>
                     </form>
                 </div>

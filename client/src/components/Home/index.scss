@@ -1,3 +1,10 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: center !important;
+}
+
 .swiper {
     width: 100%;
     padding-top: 50px;
@@ -24,6 +31,13 @@
 }
 
 @media screen and (max-width: 600px) {
+    .home-page {
+    display: flex;
+    flex-direction: column;
+    height: 8vh;
+    justify-content: center !important;
+}
+
     .my_swiper {
         height: 400px !important;
         margin-top: 110px !important;
