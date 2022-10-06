@@ -31,16 +31,16 @@ const Swiper = () => {
 	
 
 	
-	// const [addFriend] = useMutation(ADD_FRIEND);
-	// const swipeRight = async () => {
-	// 	try {
-	// 		await addFriend({
-	// 			variables: { id: People._id },
-	// 		});
-	// 	} catch (e) {
-	// 		console.error(e);
-	// 	}
-	// };
+	const [addFriend] = useMutation(ADD_FRIEND);
+	const swipeRight = async () => {
+		try {
+			await addFriend({
+				variables: { id: People._id },
+			});
+		} catch (e) {
+			console.error(e);
+		}
+	};
 
 	const onSwipe = (direction) => {
 		console.log("You swiped: " + direction);
@@ -59,35 +59,36 @@ const Swiper = () => {
 	};
 	return (
 		<CardDiv>
+			
 			{People.map((person, index) => {
-				return (
-					<TinderCard
-						key={index}
-						className="swipe"
-						onSwipe={onSwipe}
-						onCardLeftScreen={() => onCardLeftScreen("Match")}
-						preventSwipe={["up", "down"]}
-					>
-						<ImgDiv
-							style={{ backgroundImage: `url(${person.image})` }}
-							bg={person.image}
-						>
-							<h1
-								style={{
-									color: "white",
-									position: "absolute",
-									bottom: "0px",
-									left: "5px",
-									fontSize: "18px",
-									fontWeight: "bold",
-								}}
-							>
-								{person.name}
-							</h1>
-						</ImgDiv>
-					</TinderCard>
-				);
-			})}
+							return (
+								<TinderCard
+									key={index}
+									className="swipe"
+									onSwipe={onSwipe}
+									onCardLeftScreen={() => onCardLeftScreen("Match")}
+									preventSwipe={["up", "down"]}
+								>
+									<ImgDiv
+										style={{ backgroundImage: `url(${person.image})` }}
+										bg={person.image}
+									>
+										<h1
+											style={{
+												color: "white",
+												position: "absolute",
+												bottom: "0px",
+												left: "5px",
+												fontSize: "18px",
+												fontWeight: "bold",
+											}}
+										>
+											{person.name}
+										</h1>
+									</ImgDiv>
+								</TinderCard>
+							);
+						})}
 		</CardDiv>
 	);
 };

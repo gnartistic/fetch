@@ -1,23 +1,15 @@
 import { gql } from "@apollo/client";
 
 export const QUERY_USERS = gql`
-	query users {
+	query Query {
 		users {
 			_id
-			username
 			email
+			username
 			pets {
-				_id
 				petName
-				petBio
-				petPic
-				petAge
-				personalityTraits
-				breed
-				petGender
-				favActivity
+				_id
 			}
-			gender
 		}
 	}
 `;

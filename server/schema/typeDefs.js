@@ -50,8 +50,8 @@ type Message {
 
 type Query {
     me: User
+    users: [User]
     user(id: ID!):User
-    users: [User!]
     pets: [Pet]
     messages: [Message!]
 }
