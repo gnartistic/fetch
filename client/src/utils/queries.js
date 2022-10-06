@@ -17,8 +17,6 @@ export const QUERY_USERS = gql`
 				petGender
 				favActivity
 			}
-			city
-			state
 			gender
 		}
 	}
@@ -40,16 +38,12 @@ export const QUERY_USER = gql`
 				petGender
 				favActivity
 			}
-			matches {
+			friends {
 				_id
 				username
 			}
 			age
 			gender
-			showMe
-			city
-			state
-			occupation
 		}
 	}
 `;
@@ -62,6 +56,8 @@ export const QUERY_ME = gql`
 			email
 			pets {
 				petName
+				petBio
+				petPic
 				petAge
 				personalityTraits
 				breed
@@ -74,10 +70,6 @@ export const QUERY_ME = gql`
 			}
 			age
 			gender
-			showMe
-			city
-			state
-			occupation
 		}
 	}
 `;
@@ -88,8 +80,7 @@ export const QUERY_ME_BASIC = gql`
 			_id
 			username
 			email
-			matchCount
-			matches {
+			friends {
 				_id
 				username
 			}

@@ -8,10 +8,6 @@ const petSchema = new Schema({
         type: String,
         required: true,
     },
-    name: {
-        type: String, 
-        required: true
-    },
     petBio: {
         type: String,
         minlength: 0,

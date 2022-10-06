@@ -3,8 +3,8 @@ import './index.scss'
 import { NavLink } from 'react-router-dom'
 import Ball from '../../assets/images/invertedBall.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComment, faUser, faUserFriends, faHome } from '@fortawesome/free-solid-svg-icons';
-
+import { faComment, faUser, faUserFriends, faHome, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import Auth from "../../utils/auth";
 // 
 
 const bg = {
@@ -14,6 +14,10 @@ const bg = {
 }
 
 const Navbar = () => {
+    const logout = event => {
+        event.preventDefault();
+        Auth.logout();
+    }
     return (
         <>
         <div className='nav-bar2' style={bg}>
@@ -29,6 +33,8 @@ const Navbar = () => {
             </div>
             {/* icon container */}
                 <nav>
+                    {Auth.loggedIn() ? (
+                        <>
                     <NavLink exact='true' activeclassname='active' className="home-link" to='/home'>
                         <FontAwesomeIcon className='icon' icon={faHome} color='#fefefe' />
                 </NavLink>
@@ -41,6 +47,16 @@ const Navbar = () => {
                     <NavLink exact='true' activeclassname='active' className="chat-link" to='/chat'>
                         <FontAwesomeIcon className='icon' icon={faComment} color='#fefefe' />
                 </NavLink>
+                <NavLink exact='true' activeclassname='active' className="logout" to='/' onclick={logout}>
+                        <FontAwesomeIcon className='icon' icon={faRightFromBracket} color='#fefefe' />
+                </NavLink></>
+                
+                    ) : (
+                        <>
+							<NavLink to="/login">Login</NavLink>
+							<NavLink to="/signup">Signup</NavLink>
+						</>
+                )}
             </nav>
             </div>
         </>
