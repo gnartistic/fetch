@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import UserDetails from './UserDetails'
 import PetDetails from './PetDetails'
 import './index.scss';
@@ -27,6 +27,10 @@ const Signup = () =>
         navigate( '/login' );
     }
 
+    const navigateToHome = () =>
+    {
+        navigate( '/Home' );
+    }
     // page's state
     const [ page, setPage ] = useState( 0 );
 
@@ -63,9 +67,11 @@ const Signup = () =>
             } );
 
             Auth.login( data.addUser.token );
+
         } catch( e ) {
             console.error( e );
         }
+
     };
 
     // page titles
@@ -116,6 +122,8 @@ const Signup = () =>
                                     // index starts at 0, so if the page = 2, then the index needs to be 1 to match, that's why formTitles.length -1
                                     if( page === formTitles.length - 1 ) {
                                         console.log( formData );
+                                            navigateToHome();
+
                                         return formData;
                                     } else {
                                         setPage( ( currPage ) => currPage + 1 );

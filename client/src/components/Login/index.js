@@ -69,6 +69,7 @@ const Login = ( props ) =>
 					</h1>
 				</div>
 				<div className="login-form">
+					{error && <h2 style={{textAlign: 'center', fontFamily:'Bold', color: 'white', fontSize:'2.5vh'}}>Please check your email and password.</h2>}
 					<form
 						onSubmit={handleFormSubmit}>
 						{/* need to update this to use MUI components. <textfield and <formcontrol  */}
@@ -94,17 +95,16 @@ const Login = ( props ) =>
 
 						<button className="signIn" type="submit">Sign in
 						</button>
-					</form>
 					{/* link to signup component */}
 						<button className="createAccount">
 							<Link to="/Signup">Create Account</Link>
-						</button>
-
+					</button>
+					
 						<p>
 							By tapping "Create Account" or "Sign in", you agree to our Terms
 							of Service.
-					</p>
-					
+						</p>
+					</form>
 				</div>
 			</div>
 			{/* the loader inbetween screens */}

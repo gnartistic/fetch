@@ -52,44 +52,11 @@ $space: 1rem;
         animation-fill-mode: forwards;
         clear: both;
 
-        .createAccount {
-            position: absolute;
-            bottom:15vh ;
-            left: 8vh;
-                padding: 1rem;
-                width: 25rem;
-                margin-top: 3rem;
-                border: none;
-                border-radius: 25px;
-                text-transform: uppercase;
-                background: linear-gradient(90deg, #637dec 0%,#7068ce 20%, #7e55af 100%);
-
-                a {
-                font-family: 'Medium';
-                color: #fefefe;
-                text-decoration: none;
-                }
-            }
-
-            p {
-                position: absolute;
-                top: 40vh;
-                left: 2vw;
-                width: 25vw;
-                font-family: 'Light';
-                font-weight: 600;
-                margin: 1rem 0 1rem 0;
-                text-align: center;
-                color: #444444;
-                padding: 0 2rem 0 2rem;
-            }
-
         form {
             width: 330px;
             height: 350px;
             display: flex;
             padding: 2rem;
-            padding-bottom: 25vh;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -103,7 +70,7 @@ $space: 1rem;
                 0 ($space * 4) ($space * 8) rgba(0, 0, 0, 0.05
             );
 
-            a {
+            a, p {
                 font-family: 'Light';
                 font-weight: 600;
                 margin: 1rem 0 1rem 0;
@@ -124,6 +91,21 @@ $space: 1rem;
                 color: #fefefe;
             }
 
+            .createAccount {
+                padding: 1rem;
+                width: 25rem;
+                margin-top: 3rem;
+                border: none;
+                border-radius: 25px;
+                text-transform: uppercase;
+                background: linear-gradient(90deg, #637dec 0%,#7068ce 20%, #7e55af 100%);
+
+                a {
+                font-family: 'Medium';
+                color: #fefefe;
+                text-decoration: none;
+                }
+            }
 
             input {
                 padding: .8rem;

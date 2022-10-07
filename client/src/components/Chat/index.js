@@ -41,7 +41,7 @@ export const Chat = () =>
                 <div className='container chat-page'>
                     <div>
                     <div className='messageList'>
-                        <h3 style={font}>Now chatting with {user}</h3>
+                        <h3 style={font}>These are your messages, {user}.</h3>
                             <Messages username={user} />
                     </div>
                     </div>
